@@ -1,0 +1,7 @@
+#section_container {
+    padding: 10px 0;
+}
+
+#section_container .sub_section {
+    margin-bottom: 60px;
+}

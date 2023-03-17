@@ -1,0 +1,11 @@
+@media screen and (max-width: 500px) {
+  .facets .dropdown--label:after,
+  .job-results__icon--alert:before,
+  .job-results__icon--rss:before,
+  .promoter--standard-ltr .promoter__button:after,
+  .promoter--standard-rtl .promoter__button:after {
+    font-family: adecco-glyphs !important;
+    font-weight: 400;
+    right: 5px !important;
+  }
+}

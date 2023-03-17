@@ -1,0 +1,255 @@
+<div id="banner-area" class="banner p-0">
+    <div class="banner_content">
+        <h3 class="banner-sub-title">Popular Job Roles:</h3>
+        <h1 class="banner-title">Administrator</h1>
+    </div>
+
+    <div class="desktop_aside_container" id="desktop_aside_container">
+        <aside id="desktop_aside">
+            <div class="aside_header">On this profile</div>
+            <ul id="aside_menu">
+                <li>
+                    <a href="#job_description">
+                        <img src="-/media/5ab0662c730f4cf3a22b6359d70deacb.ashx" alt="arrow"> <span>Job
+                            description</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#job_operation_container">
+                        <img src="-/media/5ab0662c730f4cf3a22b6359d70deacb.ashx" alt="arrow"> <span>What does the job
+                            involve?</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#key_skill_conatiner">
+                        <img src="-/media/5ab0662c730f4cf3a22b6359d70deacb.ashx" alt="arrow"> <span>Key Skills</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#typical_employers_container">
+                        <img src="-/media/5ab0662c730f4cf3a22b6359d70deacb.ashx" alt="arrow"> <span>Typical
+                            Employers</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#career_progression_container">
+                        <img src="-/media/5ab0662c730f4cf3a22b6359d70deacb.ashx" alt="arrow"> <span>Career
+                            Progression</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#live_jobs">
+                        <img src="-/media/5ab0662c730f4cf3a22b6359d70deacb.ashx" alt="arrow"> <span>Live Jobs</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#related_industries">
+                        <img src="-/media/5ab0662c730f4cf3a22b6359d70deacb.ashx" alt="arrow"> <span>Related
+                            Industries</span>
+                    </a>
+                </li>
+            </ul>
+        </aside>
+    </div>
+
+</div>
+
+
+<!-- =========== Side panel: aside code =======  -->
+<style>
+    html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 100px;
+    }
+
+    #body_1_spotlightContainer {
+        padding: 0;
+    }
+
+    #body_1_spotlight {
+        padding-right: 0;
+    }
+
+    #site-header {
+        z-index: 9999999999;
+    }
+
+
+
+    #body_3_spotlight {
+        position: relative;
+        z-index: 66666;
+        padding: 0;
+    }
+
+    #body_4_spotlightContainer {
+        position: relative;
+        z-index: 7777777;
+    }
+
+    footer.page-footer {
+        position: relative;
+        z-index: 66666;
+    }
+
+    #desktop_aside_container {
+        position: absolute;
+        top: 9px;
+        right: -10px;
+        width: 300px;
+        height: 100vh;
+    }
+
+    #desktop_aside {
+        width: 300px;
+        height: 100vh;
+        background: #ef2e24;
+        position: fixed;
+        z-index: 55555;
+        color: white;
+        font-size: 30px;
+        padding: 20px;
+    }
+
+    /* ======= */
+    #desktop_aside_container #desktop_aside .aside_header {
+        font-size: 30px;
+        border-bottom: 2px solid #fff;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+    }
+
+    #desktop_aside_container #aside_menu {
+        width: 100%;
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    #desktop_aside_container #aside_menu a {
+        color: #fff;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        font-size: 20px;
+    }
+
+    #desktop_aside_container #aside_menu a img {
+        width: 22px;
+    }
+
+    /*
+    #desktop_aside_container #aside_menu .container {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    
+
+    
+
+    */
+</style>
+
+<style>
+    /* COMMON CODE */
+    *,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'houschka_headdemibold', sans-serif;
+    }
+
+
+    #body_1_spotlightContainer {
+        background: url(-/media/526990fb9e5d4fc895b97dbe64457c5d.ashx) no-repeat center;
+        height: auto;
+        background-size: cover;
+    }
+
+    #banner-area {
+        height: 530px;
+        width: 100%;
+        padding: 50px 0;
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+    }
+
+    #banner-area .banner-sub-title {
+        font-family: 'houschka_headdemibold', sans-serif;
+        /* font-size: 50px; */
+        font-size: clamp(1.69rem, calc(1.40rem + 1.44vw), 3.13rem);
+        /* line-height: 70px; */
+        line-height: clamp(2.50rem, calc(2.13rem + 1.88vw), 4.38rem);
+        color: #fff;
+    }
+
+    #banner-area .banner-title {
+        font-family: 'houschka_headdemibold', sans-serif;
+        /* font-size: 60px; */
+        font-size: clamp(1.94rem, calc(1.58rem + 1.81vw), 3.75rem);
+        /* line-height: 80px; */
+        line-height: clamp(3.38rem, calc(2.55rem + 4.13vw), 7.50rem);
+        ;
+        color: #fff;
+    }
+
+    @media screen and (max-width: 991px) {
+        #banner-area {
+            padding-left: 5%;
+        }
+
+        .desktop_aside_container {
+            display: none;
+        }
+
+    }
+
+
+
+    /* Screen 640px */
+    @media screen and (max-width:640px) {
+        #body_1_spotlightContainer {
+            background: url(-/media/b141653225a64b3eb125136ab8c4cd2d.ashx) no-repeat center;
+            background-size: cover;
+            position: relative;
+        }
+
+        #body_1_spotlightContainer::after {
+            position: absolute;
+            bottom: 0;
+            height: 100%;
+            width: 100%;
+            background: rgb(52, 52, 52);
+            background: linear-gradient(0deg,
+                    rgba(0, 0, 0, 0.8) 0%,
+                    rgba(0, 0, 0, 0) 59%);
+        }
+
+        #body_1_spotlightContainer .banner_content {
+            position: relative;
+            z-index: 1;
+        }
+    }
+</style>
+
+</style>
+
+
+<script>
+    document.addEventListener("load", () => {
+        const aside = document.querySelector(".mobile_aside_container");
+        const body2 = document.querySelector("#body_2_spotlightContainer");
+
+        body2.insertAdjacentElement("afterbegin", aside);
+    })
+</script>

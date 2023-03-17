@@ -1,0 +1,1281 @@
+<style>
+  body {
+    scroll-behavior: smooth;
+    scroll-padding-top: 120px;
+  }
+  .in-d-tit {
+    font-size: 25px;
+    line-height: 34px;
+    text-align: left;
+    color: #000;
+  }
+
+  .with-heading {
+    font-family: "houschka_headmedium";
+  }
+  .without-heading {
+    font-family: "houschka_headdemibold";
+  }
+  #pageloader {
+    background: rgba(255, 255, 255, 0.8);
+    display: none;
+  }
+  #pageloader img {
+    left: 58%;
+    margin-left: -32px;
+    margin-top: -32px;
+    position: absolute;
+    top: 85%;
+    width: 30px;
+    height: 30px;
+  }
+  #pageloader img {
+    left: 34% !important;
+    margin-top: -20px !important;
+  }
+  .ma-hidden {
+    font-size: 16px !important;
+  }
+  .faq_box {
+    display: flex;
+  }
+  .faq_details {
+    width: 50%;
+    display: flex;
+  }
+  .faq_text {
+    font-size: 40px;
+    width: 98%;
+    color: #8e8e8e;
+    margin-top: 5px;
+    line-height: 40px;
+    margin-left: 5px;
+  }
+  .info_box {
+    margin-bottom: 25px;
+  }
+  .info_title {
+    font-size: 26px;
+    font-family: "houschka_headbold";
+    color: #8e8e8e;
+    margin-bottom: 1%;
+    line-height: 34px;
+  }
+  .info_details {
+    font-size: 20px;
+    font-family: "houschka_headmedium";
+    line-height: 120%;
+  }
+  .d-flex {
+    display: flex;
+  }
+  #form {
+    margin: 0 auto;
+  }
+  .form-field {
+    margin: 0 0 1rem 0;
+    width: 50%;
+  }
+  .form-section {
+    margin-bottom: 150px;
+  }
+  .form-field input {
+    width: 96% !important;
+    height: 60px;
+    padding: 0.5rem;
+    box-sizing: border-box;
+    border: 1px solid #b2b2b2;
+    border-radius: 3px;
+    box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    color: #000;
+  }
+  .form-field label {
+    display: block;
+    font-family: "houschka_headdemibold" !important;
+    font-size: 24px;
+    color: #da291c !important;
+    line-height: 26px;
+    margin-top: 11px;
+    margin-bottom: 11px;
+  }
+  .form-field select {
+    width: 100% !important;
+    height: 58px;
+    padding: 0.5rem;
+    box-sizing: border-box;
+    border: 1px solid #b2b2b2;
+    border-radius: 7px;
+    box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    color: #000;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    cursor: pointer;
+  }
+  .custom-selectbox {
+    position: relative;
+    width: 96%;
+  }
+  .custom-selectbox:after {
+    content: "";
+    height: 0;
+    width: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #000;
+    position: absolute;
+    right: 10px;
+    bottom: 26px;
+    transition: all 0.3s linear;
+  }
+  .custom-selectbox.open:after {
+    -webkit-transform: rotate(-180deg);
+    -moz-transform: rotate(-180deg);
+    -o-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+  }
+  .submit_btn {
+    display: inline-block;
+    font-size: 22px;
+    font-weight: 700;
+    border: none;
+    border-radius: 7px;
+    text-shadow: none;
+    box-shadow: none;
+    transition: all 0.5s ease-in-out;
+    padding: 15px 25px;
+    color: #fff;
+    background: linear-gradient(#d72720 0%, #c3193c 100%);
+    margin-top: 20px;
+  }
+  .top-box {
+    margin-top: 40px;
+    margin-bottom: 45px;
+  }
+  .red-line {
+    background-color: #bf0d3e;
+    height: 3px;
+    margin-top: 60px;
+    margin-bottom: 50px;
+  }
+  .form_title {
+    font-size: 40px;
+    font-family: "houschka_headdemibold";
+    line-height: 44px;
+  }
+  #select-1 {
+    display: none;
+    /* padding-left: 100px; */
+  }
+  #select-2 {
+    display: none;
+    /* padding-left: 100px; */
+  }
+  .red-line-2 {
+    background-color: #bf0d3e;
+    height: 3px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .m-t-25 {
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+  @media (max-width: 575px) {
+    .info_details {
+      font-size: 15px !important;
+    }
+    .in-d-tit {
+      font-size: 20px;
+      line-height: 25px;
+    }
+
+    .info_title {
+      font-size: 20px;
+      line-height: 26px;
+    }
+  }
+  @media (min-width: 576px) and (max-width: 991.98px) {
+    .form_title {
+      font-size: 25px;
+      font-family: "houschka_headdemibold";
+    }
+    .info_details {
+      font-size: 20px;
+    }
+    .info_title {
+      font-size: 23px;
+      line-height: 30px;
+    }
+    .in-d-tit {
+      font-size: 22px;
+      line-height: 30px;
+    }
+  }
+</style>
+
+<section>
+  <div class="pp_wraper"></div>
+  <div class="scfForm"></div>
+</section>
+
+<section>
+  <div class="info_box">
+    <p class="m-t-25 in-d-tit without-heading">
+      Following on from the Winter edition published in November, the year
+      concluded with strong jobs growth and unemployment at a near historic low
+      of 3.7%. Despite this, it was a year of uncertainty which looks set to
+      continue into 2023. Headwinds from the cost of living crisis, the impact
+      of increased inflation, supply chain challenges and the long-lasting
+      impact of the pandemic continue to challenge organisations across all
+      regions of the UK. Whilst this is a turbulent time for many industries,
+      hiring and retaining critical talent remains a top priority. With any
+      recession expected to be both short and shallow, businesses must continue
+      to prioritise workforce strategy and prepare for growth in the years
+      ahead.
+    </p>
+  </div>
+  <div class="red-line-2">&nbsp;</div>
+  <div class="info_box">
+    <p class="info_title">Labour market expertise</p>
+    <p class="in-d-tit with-heading">
+      We look at the overall picture, at differences between sectors, and at the
+      outlook for the 12 regions of the UK, with insight from Adecco’s regional
+      experts.
+    </p>
+  </div>
+  <div class="info_box">
+    <p class="info_title">Objective salary data</p>
+    <p class="in-d-tit with-heading">
+      The salaries are derived from data provided by Salary.com, the market
+      leader in compensation software. These have then been verified with Adecco
+      consultants across all regions and adjusted accordingly to ensure accurate
+      representation of current pay, given the rapid wage growth in recent
+      months
+    </p>
+  </div>
+  <div class="info_box">
+    <p class="info_title">Insight for the future</p>
+    <p class="in-d-tit with-heading">
+      In partnership with Oxford Economics, we forecast what is likely to happen
+      to the labour market in 2023 and 2024, and what the longer-term prospects
+      might be.
+    </p>
+  </div>
+  <div class="red-line"></div>
+  <div id="labourmarket"></div>
+</section>
+
+<!-- ====================================================== -->
+<!--                          MY CSS                        -->
+<!-- ====================================================== -->
+<style>
+  /* #form .checkbox_field {
+  } */
+  #form .checkbox_field input {
+    margin-right: 10px;
+  }
+  #form .checkbox_field p {
+    font-family: "houschka_headmedium";
+    font-weight: 300;
+    display: inline;
+  }
+
+  .agree_error {
+    color: #da291c !important;
+    padding-left: 28px;
+    display: block;
+  }
+
+  #previousEdition {
+    margin: 50px 0 20px;
+    margin-bottom: 20px;
+  }
+  #previousEdition p {
+    font-size: 30px;
+    font-weight: 900;
+    font-family: "houschka_headbold";
+  }
+
+  #previousEdition .box_container {
+    display: flex !important;
+    gap: 20px !important;
+  }
+
+  #previousEdition .box_container .card img {
+    width: 200px;
+  }
+</style>
+
+<style>
+  /* #form .checkbox_field {
+  } */
+  #form .checkbox_field input {
+    margin-right: 10px;
+  }
+  #form .checkbox_field p {
+    font-family: "houschka_headmedium";
+    font-weight: 300;
+    display: inline;
+  }
+
+  /* #checkbox_area {
+    display: none;
+  } */
+
+  #privacy_error,
+  #employer_privacy_error {
+    color: #da291c !important;
+    display: block;
+    padding-left: 28px;
+  }
+
+  #input-industry-field {
+    position: relative;
+  }
+
+  #input-industry-field ul {
+    list-style: none;
+    /* position: absolute; */
+    bottom: -100px;
+    left: 0;
+    width: 96%;
+    padding: 5px 10px;
+  }
+  #input-industry-field .list {
+    background-color: transparent;
+  }
+  #input-industry-field .list-items {
+    padding: 10px 5px;
+    border-bottom: 1px solid #ddd;
+  }
+  #input-industry-field .list-items:hover {
+    background-color: #dddddd;
+  }
+
+  #select-1,
+  #select-2 {
+    display: none;
+  }
+</style>
+<!-- ====================================================== -->
+<!--                      FORM SECTION                      -->
+<!-- ====================================================== -->
+<section class="form-section">
+  <p class="form_title">
+    Get your copy of the spring edition of the Adecco Labour Market Outlook 2023
+  </p>
+
+  <div id="form" class="validate">
+    <!-- I AM  -->
+    <div class="d-flex">
+      <div class="form-field">
+        <label for="password-input">I am</label>
+
+        <div id="select" class="custom-selectbox">
+          <select
+            name="input-iam"
+            class="custom-select"
+            required
+            onchange="showDiv(this)"
+            id="input-iam"
+            aria-describedby="input-iam"
+          >
+            <option value="" disabled selected hidden>Select</option>
+            <option value="1">An employee / Jobseeker</option>
+            <option value="2">An employer</option>
+          </select>
+
+          <label id="error-type" class="ma-hidden"></label>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===========================================================
+                          SELECT 1 
+    ============================================================= -->
+    <div id="select-1" class="form-1">
+      <!-- Name -->
+      <div class="d-flex d-flex-first">
+        <div class="form-field">
+          <label for="jobseeker_firstname">First Name*</label>
+          <input
+            type="text"
+            name="jobseeker_firstname"
+            id="jobseeker_firstname"
+            aria-describedby="jobseeker_firstname"
+            placeholder="Insert first name here"
+          />
+          <label id="error-firstname" class="ma-hidden"></label>
+        </div>
+        <div class="form-field">
+          <label for="jobseeker_lastname">Last Name*</label>
+          <input
+            type="text"
+            name="jobseeker_lastname"
+            id="jobseeker_lastname"
+            aria-describedby="jobseeker_lastname"
+            placeholder="Insert last name here"
+          />
+          <label id="error-lastname" class="ma-hidden"></label>
+        </div>
+      </div>
+
+      <!-- Email Number -->
+      <div class="d-flex">
+        <div class="form-field">
+          <label for="jobseeker_email">Email*</label>
+          <input
+            type="text"
+            id="jobseeker_email"
+            name="jobseeker_email"
+            aria-describedby="jobseeker_email"
+            placeholder="Email"
+          />
+          <label id="error-email" class="ma-hidden"></label>
+        </div>
+        <div class="form-field">
+          <label for="jobseeker_phone">Phone number*</label>
+          <input
+            type="text"
+            id="jobseeker_phone"
+            name="jobseeker_phone"
+            aria-describedby="jobseeker_phone"
+            placeholder="Phone number"
+          />
+          <label id="error-phone" class="ma-hidden"></label>
+        </div>
+      </div>
+
+      <!-- Option for adecco consultant  -->
+      <div class="d-flex">
+        <div class="form-field">
+          <label for="speak_option"
+            >Do you want to speak to an Adecco consultant about new work
+            opportunities?*</label
+          >
+          <div id="select" class="custom-selectbox">
+            <select
+              name="speak_option"
+              class="custom-select"
+              id="speak_option"
+              aria-describedby="speak_option"
+            >
+              <option value="" disabled selected hidden>Select</option>
+              <option value="yes">Yes</option>
+              <option value="no">No</option>
+            </select>
+
+            <label id="error-speak_option" class="ma-hidden"></label>
+          </div>
+        </div>
+      </div>
+
+      <!-- ======= CHECKBOX AREA -->
+      <div class="checkbox_area" id="checkbox_area">
+        <div class="checkbox_field">
+          <label for="update_jobseeker">
+            <input
+              type="checkbox"
+              id="update_jobseeker"
+              name="update_jobseeker"
+            />
+            <p>I want to receive the latest news & updates from Adecco</p>
+          </label>
+        </div>
+        <div class="checkbox_field">
+          <label for="agree_jobseeker">
+            <input
+              type="checkbox"
+              id="agree_jobseeker"
+              name="|agree_jobseeker"
+            />
+            <p>I have read and agree to the Privacy Policy*</p>
+            <label id="agree_error" class="ma-hidden agree_error"></label>
+          </label>
+        </div>
+      </div>
+
+      <div class="form-field btn-sec button_for_jobseeker">
+        <div id="pageloader" class="loader">
+          <img
+            src="https://www.adecco.co.uk/~/media/AdeccoGroup/Brands/Adecco%20Global%202016/UK/media/loader-large.gif"
+            alt="processing..."
+            width="10%"
+            height="10%"
+          />
+        </div>
+        <div
+          id="sendButton_jobseeker"
+          name="myButton"
+          class="submit_btn"
+          onclick="submitFormOne()"
+        >
+          Get the Adecco Labour Market Outlook 2023
+          <!-- Select-1 -->
+        </div>
+      </div>
+    </div>
+
+    <!-- ===========================================================
+                          SELECT 2 
+    ============================================================= -->
+    <div id="select-2" class="form-2">
+      <!-- Name -->
+      <div class="d-flex d-flex-first">
+        <div class="form-field">
+          <label for="employer_lastname">First Name*</label>
+          <input
+            type="text"
+            name="employer_firstname"
+            id="employer_firstname"
+            aria-describedby="employer_firstname"
+            placeholder="Insert first name here"
+          />
+          <label id="error-employer_firstname" class="ma-hidden"></label>
+        </div>
+        <div class="form-field">
+          <label for="employer_lastname">Last Name*</label>
+          <input
+            type="text"
+            name="employer_lastname"
+            id="employer_lastname"
+            aria-describedby="employer_lastname"
+            placeholder="Insert last name here"
+          />
+          <label id="error-employer_lastname" class="ma-hidden"></label>
+        </div>
+      </div>
+      <!-- Email Number -->
+      <div class="d-flex">
+        <div class="form-field">
+          <label for="company_email">Company Email*</label>
+          <input
+            type="text"
+            id="company_email"
+            name="company_email"
+            aria-describedby="company_email"
+            placeholder="Email"
+          />
+          <label id="error-company_email" class="ma-hidden"></label>
+        </div>
+
+        <div class="form-field">
+          <label for="employer_phone">Phone number*</label>
+          <input
+            type="number"
+            id="employer_phone"
+            name="employer_phone"
+            aria-describedby="employer_phone"
+            placeholder="Phone number"
+          />
+          <label id="error-employer_phone" class="ma-hidden"></label>
+        </div>
+      </div>
+
+      <!-- Company Information -->
+      <div class="d-flex">
+        <div class="form-field">
+          <label for="company_name">Company Name*</label>
+          <input
+            type="text"
+            id="company_name"
+            name="company_name"
+            aria-describedby="company_name"
+            placeholder="company-name"
+          />
+          <label id="error-company_name" class="ma-hidden"></label>
+        </div>
+
+        <div class="form-field">
+          <label for="previous_worked"
+            >Have you previously worked with Adecco?*</label
+          >
+          <div id="select" class="custom-selectbox">
+            <select
+              name="previous_worked"
+              class="custom-select"
+              id="previous_worked"
+              aria-describedby="previous_worked"
+            >
+              <option value="" disabled selected hidden>Select</option>
+              <option value="yes">Yes</option>
+              <option value="no">No</option>
+            </select>
+
+            <label id="error-previous_worked" class="ma-hidden"></label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Option for adecco consultant AND Industry -->
+      <div class="d-flex">
+        <div class="form-field">
+          <label for="employer_speaktoConsultant"
+            >Do you want to speak to an Adecco consultant about new work
+            opportunities?*</label
+          >
+          <div id="select" class="custom-selectbox">
+            <select
+              name="employer_speaktoConsultant"
+              class="custom-select"
+              id="employer_speaktoConsultant"
+              aria-describedby="employer_speaktoConsultant"
+            >
+              <option value="" disabled selected hidden>Select</option>
+              <option value="yes">Yes</option>
+              <option value="no">No</option>
+            </select>
+
+            <label
+              id="error-employer_speaktoConsultant"
+              class="ma-hidden"
+            ></label>
+          </div>
+        </div>
+
+        <div class="form-field" id="input-industry-field">
+          <label for="input_industry"
+            >Industry* <br />
+            <br
+          /></label>
+          <input
+            type="text"
+            id="input_industry"
+            name="input_industry"
+            aria-describedby="input_industry"
+            placeholder="Insert your industry here / Other"
+          />
+          <ul class="list"></ul>
+          <label id="error-industry" class="ma-hidden"></label>
+        </div>
+      </div>
+
+      <!-- ======= CHECKBOX AREA -->
+      <div class="checkbox_area" id="checkbox_area">
+        <div class="checkbox_field">
+          <label for="updateNews_employer">
+            <input
+              type="checkbox"
+              id="updateNews_employer"
+              name="updateNews_employer"
+            />
+            <p>I want to receive the latest news & updates from Adecco</p>
+          </label>
+        </div>
+        <div class="checkbox_field">
+          <label for="agree_employer">
+            <input type="checkbox" id="agree_employer" name="agree_employer" />
+            <p>I have read and agree to the Privacy Policy*</p>
+            <label id="employer_privacy_error" class="ma-hidden"></label>
+          </label>
+        </div>
+      </div>
+
+      <!-- ======= SUBMIT BUTTON ======= -->
+      <div class="form-field btn-sec button_for_jobseeker">
+        <div id="pageloader" class="loader">
+          <img
+            src="https://www.adecco.co.uk/~/media/AdeccoGroup/Brands/Adecco%20Global%202016/UK/media/loader-large.gif"
+            alt="processing..."
+            width="10%"
+            height="10%"
+          />
+        </div>
+        <div
+          id="sendButton_employer"
+          name="myButton"
+          class="submit_btn"
+          onclick="submitFormTwo()"
+        >
+          Get the Adecco Labour Market Outlook 2023
+          <!-- Select-2 -->
+        </div>
+      </div>
+    </div>
+
+    <!-- ======= UNUSED SUBMIT BUTTON ======= -->
+    <div class="form-field btn-sec button_for_jobseeker">
+      <div
+        id="submitBtnForShowOnly"
+        name="myButton"
+        class="submit_btn"
+        onclick="submitFormTwo()"
+      >
+        Get the Adecco Labour Market Outlook 2023
+        <!-- Select-2 -->
+      </div>
+    </div>
+
+    <section id="previousEdition">
+      <p>Looking for a previous edition of the Adecco Labour Market Outlook?</p>
+      <div class="box_container">
+        <figure>
+          <a href="https://go.adecco.co.uk/ALMO" class="card spring_2022">
+            <img
+              src="-/media/e5ebb452653d425381f36b99960fcc47.ashx"
+              alt="Spring 2022"
+            />
+          </a>
+          <figcaption>
+            <h6>
+              <a href="https://go.adecco.co.uk/ALMO" class="card spring_2022"
+                >Spring 2022</a
+              >
+            </h6>
+          </figcaption>
+        </figure>
+        <figure>
+          <a
+            href="https://go.adeccogroup.co.uk/l/503591/2022-11-07/296np34"
+            class="card spring_2022"
+          >
+            <img
+              src="-/media/39b25678abce444daa39e1b00d032c9c.ashx"
+              alt="Winter 2022"
+            />
+          </a>
+          <figcaption>
+            <h6>
+              <a
+                href="https://go.adeccogroup.co.uk/l/503591/2022-11-07/296np34"
+                class="card spring_2022"
+                >Winter 2022</a
+              >
+            </h6>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+  </div>
+</section>
+
+<!-- ====================================================== -->
+<!--                          SCRIPT                        -->
+<!-- ====================================================== -->
+<script>
+  const selectForm = document.getElementById("input-iam");
+
+  function showDiv(select) {
+    const select_1 = document.getElementById("select-1");
+    const select_2 = document.getElementById("select-2");
+    const submitBtnForShowOnly = document.getElementById(
+      "submitBtnForShowOnly"
+    );
+
+    if (select.value == "1") {
+      submitBtnForShowOnly.style.display = "none";
+      select_1.style.display = "block";
+      select_2.style.display = "none";
+    }
+    if (select.value == "2") {
+      submitBtnForShowOnly.style.display = "none";
+      select_1.style.display = "none";
+      select_2.style.display = "block";
+    }
+  }
+
+  /* *************************************************************
+                  INDUSTRY OPTIONS
+   ************************************************************* */
+  let industries = [
+    "Banking",
+    "Building and construction",
+    "Hospitality and catering",
+    "Manufacturing and production",
+    "Marketing",
+    "Sales",
+    "Charity and non-for-profit",
+    "Engineering",
+    "Human resources",
+    "Education and training",
+    "Social care",
+    "Insurance",
+    "FMCG",
+    "Financial services",
+    "It and Telecoms",
+    "Legal",
+    "Purchasing and Procurement",
+    "Media",
+    "Admin and Office",
+    "Publice sector and Government",
+    "Travel and Tourism",
+    "Logistics, Distribution and Supply chain",
+    "Phramaceutical",
+    "Retail",
+    "Customer service and Call center",
+    "Police",
+    "Defense and military",
+  ];
+
+  let sortedNames = industries.sort();
+  let input = document.getElementById("input_industry");
+
+  input.addEventListener("keyup", (e) => {
+    removeElements();
+    for (let i of sortedNames) {
+      if (
+        i.toLowerCase().startsWith(input.value.toLowerCase()) &&
+        input.value != ""
+      ) {
+        let listItem = document.createElement("li");
+        listItem.classList.add("list-items");
+        listItem.style.cursor = "pointer";
+        listItem.setAttribute("onclick", "displayNames('" + i + "')");
+        let word = "<b>" + i.substr(0, input.value.length) + "</b>";
+        word += i.substr(input.value.length);
+        listItem.innerHTML = word;
+        document.querySelector(".list").appendChild(listItem);
+      }
+    }
+  });
+  function displayNames(value) {
+    input.value = value;
+    removeElements();
+  }
+  function removeElements() {
+    //clear all the item
+    let items = document.querySelectorAll(".list-items");
+    items.forEach((item) => {
+      item.remove();
+    });
+  }
+</script>
+
+<!-- *************************************************************
+                    SELECT 1 SCRIPT
+    ************************************************************* -->
+<script>
+  // DEFAULT ERROR HANDER
+  const errorHandle = (id, msg = "") => {
+    document.getElementById(id).innerText = msg;
+  };
+
+  // jobseeker Data
+  const jobseekerData = {
+    firstname: "",
+    lastname: "",
+    email: "",
+    phone: "",
+    speakToConsultant: "",
+    wantNewsUpdate: false,
+    agreeWithPolicy: null,
+    I_am: "",
+  };
+
+  const jobseeker_firstname = document.getElementById("jobseeker_firstname");
+  const jobseeker_lastname = document.getElementById("jobseeker_lastname");
+  const jobseeker_email = document.getElementById("jobseeker_email");
+  const jobseeker_phone = document.getElementById("jobseeker_phone");
+  const speak_option = document.getElementById("speak_option");
+  const update_jobseeker = document.getElementById("update_jobseeker");
+  const agree_jobseeker = document.getElementById("agree_jobseeker");
+  const sendButton_jobseeker = document.getElementById("sendButton_jobseeker");
+  const i_am = document.getElementById("input-iam");
+
+  // Select-1 Form Validation
+  const validate = () => {
+    let firstnameValue = jobseeker_firstname.value.trim();
+    let lastnameValue = jobseeker_lastname.value.trim();
+    let emailValue = jobseeker_email.value.trim();
+    let phoneValue = jobseeker_phone.value.trim();
+    let speakToConsultantValue = speak_option.value;
+    let update_jobseekerChecked = update_jobseeker.checked;
+    let agree_jobseekerChecked = agree_jobseeker.checked;
+    let i_am_value = i_am.value;
+
+    if ((i_am_value = "1")) {
+      jobseekerData.I_am = "An employee / Jobseeker";
+    }
+    if ((i_am_value = "2")) {
+      jobseekerData.I_am = "An employer";
+    }
+
+    // ========= First Name =========
+    if (firstnameValue === "") {
+      errorHandle("error-firstname", "** Input Field can't be empty!");
+      return false;
+    } else if (firstnameValue.length < 3) {
+      errorHandle(
+        "error-firstname",
+        "* First Name should be at least 3 character!"
+      );
+      return false;
+    } else if (firstnameValue.length > 40) {
+      errorHandle(
+        "error-firstname",
+        "** First Name should be less than 40 character!"
+      );
+
+      return false;
+    } else {
+      jobseekerData.firstname = firstnameValue;
+      errorHandle("error-firstname", "");
+    }
+
+    // ========= Last Name =========
+    if (lastnameValue === "") {
+      errorHandle("error-lastname", "** Input Field can't be empty!");
+      return false;
+    } else if (lastnameValue.length < 3) {
+      errorHandle(
+        "error-lastname",
+        "* First Name should be at least 3 character!"
+      );
+      return false;
+    } else if (lastnameValue.length > 40) {
+      errorHandle(
+        "error-lastname",
+        "** First Name should be less than 40 character!"
+      );
+
+      return false;
+    } else {
+      jobseekerData.lastname = lastnameValue;
+      errorHandle("error-lastname", "");
+    }
+
+    // ========= Email =========
+    if (emailValue === "") {
+      errorHandle("error-email", "** input Field can't be empty!");
+      return false;
+    } else if (emailValue.length > 50) {
+      errorHandle(
+        "error-email",
+        "** Too much legth. Email should under 50 letter!"
+      );
+      return false;
+    } else if (
+      !emailValue.match(
+        /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
+      )
+    ) {
+      errorHandle("error-email", "Please input a valid Email");
+      return false;
+    } else {
+      jobseekerData.email = emailValue;
+      errorHandle("error-email", "");
+    }
+
+    // ========= Phone =========
+    if (phoneValue === "") {
+      errorHandle("error-phone", "** phone can't be empty!");
+      return false;
+    } else {
+      jobseekerData.phone = phoneValue;
+      errorHandle("error-phone", "");
+    }
+
+    // ========= Speak to Adecco consultant =========
+    if (speakToConsultantValue === "") {
+      errorHandle("error-speak_option", "** input Field can't be empty!");
+      return false;
+    } else {
+      jobseekerData.speakToConsultant = speakToConsultantValue;
+      errorHandle("error-speak_option", "");
+    }
+
+    if (update_jobseekerChecked === true) {
+      jobseekerData.wantNewsUpdate = update_jobseekerChecked;
+    }
+
+    if (agree_jobseekerChecked === false) {
+      errorHandle("agree_error", "** Please check privacy policy!");
+      alert("** Please check privacy policy!");
+      return false;
+    } else {
+      jobseekerData.agreeWithPolicy = agree_jobseekerChecked;
+      errorHandle("agree_error", "");
+    }
+
+    return true;
+  };
+
+  const submitFormOne = () => {
+    if (validate()) {
+      const uriEncodedParams = $.param(jobseekerData);
+      const targetUrl =
+        "https://go.pardot.com/l/503591/2022-02-22/2698trm?" + uriEncodedParams;
+
+      $.ajax({
+        url: targetUrl,
+        dataType: "jsonp",
+        jsonpCallback: "JsonpCallback",
+        jsonp: "callback",
+        success: function (msg) {
+          console.log(msg);
+          window.location.assign("/labour-market-outlook/thank-you");
+        },
+        error: ServiceFailed,
+      });
+
+      function JsonpCallback(data) {
+        console.log(data);
+        if (data.responseStatus == 200) {
+          window.location.assign("/labour-market-outlook/thank-you");
+        } else {
+          console.log(data.responseDetails);
+        }
+      }
+
+      function ServiceFailed(msg) {
+        console.log("ServiceFailed");
+        console.log(msg.status);
+        setTimeout(console.log("ServiceFailed"), 1000);
+
+        if (msg.status == "200") {
+          window.location.assign("/labour-market-outlook/thank-you");
+        }
+      }
+    } else {
+      //
+    }
+  };
+</script>
+
+<!-- *************************************************************
+                    SELECT 2 SCRIPT
+    ************************************************************* -->
+<script>
+  const employerData = {
+    firstname: "",
+    lastname: "",
+    companyEmail: "",
+    employerPhone: "",
+    compnayName: "",
+    previous_worked: "",
+    speakToConsultant: "",
+    industry: "",
+    wantNewsUpdate: false,
+    agreeWithPolicy: null,
+    I_am: "",
+  };
+
+  const employer_firstname = document.getElementById("employer_firstname");
+  const employer_lastname = document.getElementById("employer_lastname");
+  const company_email = document.getElementById("company_email");
+  const employer_phone = document.getElementById("employer_phone");
+  const company_name = document.getElementById("company_name");
+  const previous_worked = document.getElementById("previous_worked");
+  const employer_speaktoConsultant = document.getElementById(
+    "employer_speaktoConsultant"
+  );
+  const input_industry = document.getElementById("input_industry");
+  const updateNews_employer = document.getElementById("updateNews_employer");
+  const agree_employer = document.getElementById("agree_employer");
+  const sendButton_employer = document.getElementById("sendButton_employer");
+  const who_i_am = document.getElementById("input-iam");
+
+  // Select-2 Form Validation
+  const validateFormTwo = () => {
+    let firstnameValue = employer_firstname.value.trim();
+    let lastnameValue = employer_lastname.value.trim();
+    let emailValue = company_email.value.trim();
+    let phoneValue = employer_phone.value.trim();
+    let companyNameValue = company_name.value.trim();
+    let previousWorkedValue = previous_worked.value;
+    let speakToConsultantValue = employer_speaktoConsultant.value;
+    let industryValue = input_industry.value.trim();
+    let wantNewsUpdateValue = updateNews_employer.checked;
+    let agree_employerChecked = agree_employer.checked;
+    let i_am_value = who_i_am.value;
+
+    if ((i_am_value = "1")) {
+      employerData.I_am = "An employee / Jobseeker";
+    }
+    if ((i_am_value = "2")) {
+      employerData.I_am = "An employer";
+    }
+
+    // ========= First Name =========
+    if (firstnameValue === "") {
+      errorHandle("error-employer_firstname", "** Input Field can't be empty!");
+      return false;
+    } else if (firstnameValue.length < 3) {
+      errorHandle(
+        "error-employer_firstname",
+        "* First Name should be at least 3 character!"
+      );
+      return false;
+    } else if (firstnameValue.length > 40) {
+      errorHandle(
+        "error-employer_firstname",
+        "** First Name should be less than 40 character!"
+      );
+
+      return false;
+    } else {
+      employerData.firstname = firstnameValue;
+      errorHandle("error-employer_firstname", "");
+    }
+
+    // ========= Last Name =========
+    if (lastnameValue === "") {
+      errorHandle("error-employer_lastname", "** Input Field can't be empty!");
+      return false;
+    } else if (lastnameValue.length < 3) {
+      errorHandle(
+        "error-employer_lastname",
+        "* First Name should be at least 3 character!"
+      );
+      return false;
+    } else if (lastnameValue.length > 40) {
+      errorHandle(
+        "error-employer_lastname",
+        "** First Name should be less than 40 character!"
+      );
+
+      return false;
+    } else {
+      employerData.lastname = lastnameValue;
+      errorHandle("error-employer_lastname", "");
+    }
+
+    // ========= Email =========
+    if (emailValue === "") {
+      errorHandle("error-company_email", "** input Field can't be empty!");
+      return false;
+    } else if (emailValue.length > 50) {
+      errorHandle(
+        "error-company_email",
+        "** Too much legth. Email should under 50 letter!"
+      );
+      return false;
+    } else if (
+      !emailValue.match(
+        /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
+      )
+    ) {
+      errorHandle("error-company_email", "Please input a valid Email");
+      return false;
+    } else {
+      employerData.companyEmail = emailValue;
+      errorHandle("error-company_email", "");
+    }
+
+    // ========= Phone =========
+    if (phoneValue === "") {
+      errorHandle("error-employer_phone", "** phone can't be empty!");
+      return false;
+    } else {
+      employerData.employerPhone = phoneValue;
+      errorHandle("error-employer_phone", "");
+    }
+
+    // ========= Company name ==========
+    if (companyNameValue === "") {
+      errorHandle("error-company_name", "** Input Field can't be empty!");
+      return false;
+    } else if (companyNameValue.length < 3) {
+      errorHandle(
+        "error-company_name",
+        "* First Name should be at least 3 character!"
+      );
+      return false;
+    } else if (companyNameValue.length > 50) {
+      errorHandle(
+        "error-company_name",
+        "** First Name should be less than 50 character!"
+      );
+
+      return false;
+    } else {
+      employerData.compnayName = companyNameValue;
+      errorHandle("error-company_name", "");
+    }
+
+    // ========= Previous Worked =========
+    if (previousWorkedValue === "") {
+      errorHandle("error-previous_worked", "** input Field can't be empty!");
+      return false;
+    } else {
+      employerData.previous_worked = previousWorkedValue;
+      errorHandle("error-previous_worked", "");
+    }
+
+    // ========= Speak to Adecco consultant =========
+    if (speakToConsultantValue === "") {
+      errorHandle(
+        "error-employer_speaktoConsultant",
+        "** input Field can't be empty!"
+      );
+      return false;
+    } else {
+      employerData.speakToConsultant = speakToConsultantValue;
+      errorHandle("error-employer_speaktoConsultant", "");
+    }
+
+    // ========= LasIndustry =========
+    if (industryValue === "") {
+      errorHandle("error-industry", "** Input Field can't be empty!");
+      return false;
+    } else if (industryValue.length > 40) {
+      errorHandle(
+        "error-industry",
+        "** First Name should be less than 40 character!"
+      );
+      return false;
+    } else {
+      employerData.industry = industryValue;
+      errorHandle("error-industry", "");
+    }
+
+    // ========= Checkbox Value =========
+    if (wantNewsUpdateValue === true) {
+      employerData.wantNewsUpdate = wantNewsUpdateValue;
+    }
+
+    if (agree_employerChecked === false) {
+      errorHandle("employer_privacy_error", "** Please check privacy policy!");
+      alert("** Please check privacy policy!");
+      return false;
+    } else {
+      employerData.agreeWithPolicy = agree_employerChecked;
+      errorHandle("employer_privacy_error", "");
+    }
+    return true;
+  };
+
+  const submitFormTwo = () => {
+    if (validateFormTwo()) {
+      const uriEncodedParamsForm2 = $.param(employerData);
+      const targetUrl =
+        "https://go.pardot.com/l/503591/2022-02-22/2698trm?" +
+        uriEncodedParamsForm2;
+
+      $.ajax({
+        url: targetUrl,
+        dataType: "jsonp",
+        jsonpCallback: "JsonpCallback",
+        jsonp: "callback",
+        success: function (msg) {
+          console.log(msg);
+          window.location.assign("/labour-market-outlook/thank-you");
+        },
+        error: ServiceFailed,
+      });
+
+      function JsonpCallback(data) {
+        console.log(data);
+        if (data.responseStatus == 200) {
+          window.location.assign("/labour-market-outlook/thank-you");
+        } else {
+          console.log(data.responseDetails);
+        }
+      }
+
+      function ServiceFailed(msg) {
+        console.log("ServiceFailed");
+        console.log(msg.status);
+        setTimeout(console.log("ServiceFailed"), 1000);
+
+        if (msg.status == "200") {
+          window.location.assign("/labour-market-outlook/thank-you");
+        }
+      }
+    }
+  };
+</script>

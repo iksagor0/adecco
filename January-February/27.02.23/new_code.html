@@ -1,0 +1,153 @@
+<style>
+  #body_3_spotlightContainer {
+    margin-top: 0 !important;
+  }
+  .in-d-tit {
+    font-size: 25px;
+    line-height: 34px;
+    text-align: left;
+    color: #000;
+  }
+
+  .with-heading {
+    font-family: "houschka_headmedium";
+  }
+  .without-heading {
+    font-family: "houschka_headdemibold";
+  }
+  #pageloader {
+    background: rgba(255, 255, 255, 0.8);
+    display: none;
+  }
+  #pageloader img {
+    left: 58%;
+    margin-left: -32px;
+    margin-top: -32px;
+    position: absolute;
+    top: 85%;
+    width: 30px;
+    height: 30px;
+  }
+  #pageloader img {
+    left: 34% !important;
+    margin-top: -20px !important;
+  }
+
+  @media (max-width: 575px) {
+    .info_details {
+      font-size: 15px !important;
+    }
+    .in-d-tit {
+      font-size: 20px;
+      line-height: 25px;
+    }
+
+    .info_title {
+      font-size: 20px;
+      line-height: 26px;
+    }
+  }
+  @media (min-width: 576px) and (max-width: 991.98px) {
+    .form_title {
+      font-size: 25px;
+      font-family: "houschka_headdemibold";
+    }
+    .info_details {
+      font-size: 20px;
+    }
+    .info_title {
+      font-size: 23px;
+      line-height: 30px;
+    }
+    .in-d-tit {
+      font-size: 22px;
+      line-height: 30px;
+    }
+  }
+</style>
+
+<section>
+  <div class="info_box">
+    <p class="m-t-25 in-d-tit without-heading">
+      Following on from the Spring edition published in March, we have seen a
+      year of significant change. As we publish the Winter edition, we now face
+      a cost of living crisis, unprecedented energy bills, the war in Ukraine,
+      soaring inflation and a turbulent political landscape have all contributed
+      to a difficult economic period. With talent shortages prevailing
+      throughout this time and unemployment at 3.5%, its lowest level for nearly
+      50 years, recruiting and retaining staff remains a top priority for many
+      organisations.  
+    </p>
+  </div>
+  <div class="red-line-2">&nbsp;</div>
+  <div class="info_box">
+    <p class="info_title">Labour market expertise</p>
+    <p class="in-d-tit with-heading">
+      We look at the overall picture, at differences between sectors, and at the
+      outlook for the 12 regions of the UK, with insight from Adecco’s regional
+      experts.
+    </p>
+  </div>
+  <div class="info_box">
+    <p class="info_title">Objective salary data</p>
+    <p class="in-d-tit with-heading">
+      Our salaries are derived from Lightcast data &ndash; which is harvested
+      from tens of thousands of job boards and updated every month with between
+      800,000 and 1 million new unique postings.
+    </p>
+  </div>
+  <div class="info_box">
+    <p class="info_title">Insight for the future</p>
+    <p class="in-d-tit with-heading">
+      In partnership with Oxford Economics, we suggest what is likely to happen
+      to the labour market in 2022 and 2023, and what the longer-term prospects
+      might be.
+    </p>
+  </div>
+  <div class="red-line"></div>
+  <div id="labourmarket"></div>
+</section>
+
+<section class="form-section">
+  <p class="form_title">
+    Get your copy of the Adecco Labour Market Outlook 2022
+  </p>
+
+  <div id="form" class="validate">
+    <!-- I AM  -->
+    <div class="form_control form_select_box">
+      <label for="password-input">I am</label>
+
+      <div id="select" class="custom-selectbox">
+        <select
+          name="input-iam"
+          required
+          onchange="showDiv(this)"
+          id="input-iam"
+          aria-describedby="input-iam"
+        >
+          <option value="" disabled selected hidden>Select</option>
+          <option value="1">An employee / Jobseeker</option>
+          <option value="2">An employer</option>
+        </select>
+
+        <label id="error-type" class="ma-hidden"></label>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  #form .form_select_box {
+    width: 50%;
+  }
+</style>
+
+<!-- <script>
+  present
+  perm
+
+  if(true){
+perm = present
+  }
+</script> -->

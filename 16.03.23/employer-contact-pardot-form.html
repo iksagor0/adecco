@@ -1,0 +1,1547 @@
+<link
+  href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
+  rel="stylesheet"
+/>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+<div class="body-content-form">
+  <p class="body-title for-desktop">Tell us about your staffing needs</p>
+  <p class="body-title for-mobile">Tell us about your staffing needs</p>
+  <div class="row">
+    <div class="col-sm-12 col-xs-12 pd-5">
+      <textarea
+        class="form-control line-height"
+        placeholder="How can we help?"
+        id="input-comment"
+        name="input-comment"
+        aria-describedby="input-comment"
+        rows="4"
+        autocomplete="off"
+      ></textarea>
+      <label id="error-comment" class="ma-hidden"></label>
+    </div>
+
+    <div class="col-sm-12 col-xs-12">
+      <p class="body-inner-title">My Details</p>
+    </div>
+
+    <div class="col-sm-6 col-xs-6 t-pr-6 pd-5">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="First name"
+        name="input-firstname"
+        id="input-firstname"
+        aria-describedby="input-firstname"
+      />
+      <label id="error-firstname" class="ma-hidden"></label>
+    </div>
+    <div class="col-sm-6 col-xs-6 t-pl-6 pd-5">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Last name"
+        id="input-lastname"
+        name="input-lastname"
+        aria-describedby="input-lastname"
+      />
+      <label id="error-lastname" class="ma-hidden"></label>
+    </div>
+    <div class="col-sm-6 col-xs-6 t-pl-6 pd-5">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Job title"
+        name="input-jobtitle"
+        id="input-jobtitle"
+        aria-describedby="input-jobtitle"
+      />
+      <label id="error-jobtitle" class="ma-hidden"></label>
+    </div>
+    <div class="col-sm-6 col-xs-6 t-pr-6 pd-5">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Company name"
+        name="input-company"
+        id="input-company"
+        aria-describedby="input-company"
+      />
+      <label id="error-company" class="ma-hidden"></label>
+    </div>
+
+    <div class="col-sm-6 col-xs-6 t-pr-6 pd-5">
+      <input
+        type="email"
+        class="form-control"
+        placeholder="Business email address"
+        id="input-email"
+        name="input-email"
+        aria-describedby="input-email"
+      />
+      <!-- <input type="email" class="form-control for-mobile" placeholder="Business email" id="input-email"
+                name="input-email" aria-describedby="input-email"> -->
+      <label id="error-email" class="ma-hidden"></label>
+    </div>
+    <div class="col-sm-6 col-xs-6 t-pl-6 pd-5">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Phone number"
+        id="input-phone"
+        name="input-phone"
+        aria-describedby="input-phone"
+      />
+      <label id="error-phone" class="ma-hidden"></label>
+    </div>
+
+    <div class="col-sm-12 col-xs-12">
+      <p class="body-inner-title">Company Details</p>
+    </div>
+
+    <div class="col-sm-6 col-xs-6 t-pl-6 pd-5">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Company postcode"
+        name="input-location"
+        id="input-location"
+        aria-describedby="input-location"
+      />
+      <label id="error-location" class="ma-hidden"></label>
+    </div>
+    <div class="col-sm-6 col-xs-6 t-pl-6 pd-5">
+      <select
+        class="form-control input-industry"
+        placeholder="Industry"
+        id="input-industry"
+        name="input-industry"
+        aria-describedby="input-industry"
+      >
+        <option value="">Industry</option>
+        <option value="Energy">Energy</option>
+        <option value="Engineering">Engineering</option>
+        <option value="Financial Services">Financial Services</option>
+        <option value="Life Science & Medical">Life Science & Medical</option>
+        <option value="Logistics">Logistics</option>
+        <option value="Manufacturing">Manufacturing</option>
+        <option value="Mobility">Mobility</option>
+        <option value="Public Sector">Public Sector</option>
+        <option value="Retail">Retail</option>
+        <option value="Technology">Technology</option>
+        <option value="Other">Other, please specify</option>
+      </select>
+
+      <label id="error-industry" class="ma-hidden"></label>
+    </div>
+    <div class="col-sm-6 t-pl-12 display-none-for-mobile pd-5"></div>
+    <div class="col-sm-6 col-xs-12 t-pl-12 workIn-div pd-5">
+      <input
+        type="text"
+        class="form-control workIn"
+        placeholder="I work in.."
+        id="input-other-industry"
+        name="input-other-industry"
+        aria-describedby="input-other-industry"
+      />
+      <label id="error-other-industry" class="ma-hidden"></label>
+    </div>
+
+    <div class="col-sm-6 col-xs-6 t-pl-6 pd-5">
+      <!-- <input type="text" class="form-control" placeholder="Services interested" id="input-services-interested"
+                name="input-services-interested" aria-describedby="input-services-interested"> -->
+      <select
+        class="form-control input-serv"
+        placeholder="Services I'm interested in"
+        id="input-services"
+        name="input-services"
+        aria-describedby="input-services"
+        onchange="showDiv('num','other', this)"
+      >
+        <option id="service-placeholder" value="">
+          Services I'm interested in
+        </option>
+        <option id="serv1" value="Permanent recruitment">
+          Permanent recruitment
+        </option>
+        <option id="serv2" value="Temporary recruitment">
+          Temporary recruitment
+        </option>
+        <option id="serv3" value="Industrial outsourcing">
+          Industrial outsourcing
+        </option>
+        <option id="serv4" value="Recruitment process outsourcing">
+          Recruitment process outsourcing
+        </option>
+        <option id="serv5" value="Managed service provider">
+          Managed service provider
+        </option>
+        <option id="serv6" value="HR outsourcing">HR outsourcing</option>
+        <option value="Technology">Executive Search</option>
+        <option id="serv7" value="Other">Other, please specify</option>
+      </select>
+      <!-- <select class="form-control for-mobile" placeholder="Services I'm interested in" id="input-services"
+                name="input-services" aria-describedby="input-services">
+                <option value="">Services I need</option>
+                <option value="Permanent recruitment">Permanent recruitment</option>
+                <option value="Temporary recruitment">Temporary recruitment</option>
+                <option value="Industrial outsourcing">Industrial outsourcing</option>
+                <option value="Recruitment process outsourcing">Recruitment process outsourcing</option>
+                <option value="Managed service provider">Managed service provider</option>
+                <option value="HR outsourcing">HR outsourcing</option>
+                <option value="Other">Other, please specify</option>
+            </select> -->
+      <label id="error-services" class="ma-hidden"></label>
+    </div>
+    <div class="col-sm-6 col-xs-6 t-pl-6 pd-5 num-of-hires" id="num">
+      <!-- <input type="text" class="form-control" placeholder="Number of hires" id="input-hires" name="input-hires"
+                aria-describedby="input-hires"> -->
+      <select
+        class="form-control"
+        placeholder="Number of hires needed"
+        id="input-hires"
+        name="input-hires"
+        aria-describedby="input-hires"
+      >
+        <option id="hire-placeholder" value="">Number of hires needed</option>
+        <option value="25">1-25</option>
+        <option value="50">26-50</option>
+        <option value="100">51-100</option>
+        <option value="100+">100+</option>
+      </select>
+      <!-- <select class="form-control  for-mobile" placeholder="Number of hires needed" id="input-hires"
+                name="input-hires" aria-describedby="input-hires">
+                <option value="">No. of hires</option>
+                <option value="1-25">1-25</option>
+                <option value="26-50">26-50</option>
+                <option value="51-100">51-100</option>
+                <option value="100+">100+</option>
+            </select> -->
+      <label id="error-hires" class="ma-hidden"></label>
+    </div>
+
+    <!-- newly added city dropdown section -->
+    <!-- <div class="col-sm-6 col-xs-6 t-pl-6 pd-5">
+          <select class="js-example-placeholder-single js-states form-control">
+            <option>London</option>
+            <option>Birmingham</option>
+            <option>Hull</option>
+            <option>Nottingham</option>
+            <option>Liverpool</option>
+            <option>Leeds</option>
+            <option>Sheffield</option>
+            <option>Glasgow</option>
+            <option>Leicester</option>
+            <option>Norwich</option>
+         
+  
+          </select>
+           
+            <label id="error-hires" class="ma-hidden"></label>
+        </div> -->
+
+    <div class="col-sm-12 col-xs-12 interestedIn-div pd-5" id="other">
+      <textarea
+        class="form-control line-height interestedIn"
+        placeholder="I’m interested in…"
+        id="input-other-services"
+        name="input-other-services"
+        aria-describedby="input-other-services"
+        rows="2"
+        autocomplete="off"
+      ></textarea>
+      <label id="error-other-services" class="ma-hidden"></label>
+    </div>
+
+    <!-- ******** NEW HIDDEN FIELD ******** -->
+    <input type="hidden" name="input-hidden" id="input-hidden" />
+    <!-- ******** NEW HIDDEN FIELD ******** -->
+
+    <div class="col-sm-12 col-xs-12 pd-5">
+      <label class="check-text"
+        ><input type="checkbox" value="" id="input-stayconnected" />&nbsp;I have
+        read and agree to the
+        <a href="/privacy-policy/">Privacy Policy</a></label
+      >
+      <label id="error-stayconnected" class="ma-hidden"></label>
+    </div>
+    <div class="col-sm-12 col-xs-12 pd-5">
+      <label class="check-text"
+        ><input type="checkbox" value="" id="input-marketing-opt-in" />&nbsp;
+        Sign up to receive email newsletters and industry leading
+        insights</label
+      >
+      <label id="error-marketing-opt-in" class="ma-hidden"></label>
+    </div>
+
+    <div id="pageloader" class="loader">
+      <img
+        src="https://www.adecco.co.uk/~/media/AdeccoGroup/Brands/Adecco%20Global%202016/UK/media/loader-large.gif"
+        alt="processing..."
+        width="10%"
+        height="10%"
+      />
+    </div>
+    <div class="submit-btn">
+      <button
+        id="sendButton"
+        type="button"
+        onclick="validateForm()"
+        name="myButton"
+      >
+        Send now<i class="fa fa-angle-right angle-duble-icon mr-15"></i
+        ><i class="fa fa-angle-right angle-duble-icon"></i>
+      </button>
+    </div>
+  </div>
+</div>
+
+<style>
+  textarea.form-control {
+    height: 140px;
+    margin-top: 5%;
+  }
+  .num-of-hires {
+    display: none;
+  }
+  .interestedIn-div {
+    display: none;
+  }
+
+  .workIn-div {
+    display: none;
+  }
+
+  .display-none-for-mobile {
+    display: none;
+  }
+
+  select {
+    background: url(-/media/9215afd7abb548f1915d8305229e120c.ashx) no-repeat
+      right !important;
+    -webkit-appearance: none;
+    background-position-x: 97% !important;
+  }
+
+  #pageloader img {
+    left: 50% !important;
+    margin-top: -15px !important;
+  }
+
+  input,
+  button,
+  select,
+  textarea {
+    margin-bottom: 0px;
+  }
+
+  .m-t-15 {
+    margin-top: 15px;
+  }
+
+  .line-height {
+    line-height: 41px;
+  }
+
+  .dropdown-icon {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background: url(/~/-/media/adeccogroup/brands/adecco-global-2016/uk/media/dropdown-icon.png)
+      no-repeat 95% center !important;
+  }
+
+  .for-mobile {
+    display: none;
+  }
+
+  .for-desktop {
+    display: block;
+  }
+
+  .body-content-form {
+    margin: 90px;
+    margin-top: 55px;
+  }
+
+  .body-title {
+    font-family: "houschka_headmedium";
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 47px;
+    text-align: left;
+    color: #da291c;
+    margin-bottom: 30px;
+  }
+
+  .body-inner-title {
+    font-family: "houschka_headmedium";
+    font-size: 28px;
+    text-align: left;
+    color: #d9281c;
+    margin-bottom: 30px;
+  }
+
+  #body_2_spotlightContainer {
+    background: #f0f0f0;
+  }
+
+  #body_2_spotlight {
+    margin-top: -135px;
+    background: #fff;
+    border-radius: 8px;
+    margin-bottom: 59px;
+  }
+
+  .form-control {
+    font-family: "Nunito";
+    font-weight: normal;
+    font-size: 22px;
+    color: #999999;
+    padding: 0px 12px;
+    height: 43px;
+  }
+
+  .icon-color {
+    color: #e22514;
+    font-size: 20px;
+  }
+
+  .check-text {
+    font-family: "Nunito";
+    font-weight: normal;
+    font-size: 22px;
+    text-align: left;
+    color: #999999;
+  }
+
+  .txt-small {
+    font-family: "Nunito";
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 23px;
+    text-align: left;
+    color: #707070;
+  }
+
+  #input-stayconnected {
+    margin-right: 10px;
+  }
+
+  #sendButton {
+    width: 100%;
+    height: 52px;
+    border-radius: 9px;
+    background: linear-gradient(#d72720 0%, #c3193c 100%);
+    border: none;
+    color: #fff;
+    font-size: 30px;
+    font-family: "houschka_headmedium";
+    margin-top: 45px;
+    line-height: 40px;
+    margin-bottom: -10px;
+  }
+
+  #sendButton:hover {
+    background: #fff;
+    border: 2px solid #bf1640;
+    color: #bf1640;
+  }
+
+  .angle-duble-icon {
+    float: right;
+    font-size: 36px;
+  }
+
+  .mr-15 {
+    margin-right: 15px;
+  }
+
+  @media only screen and (min-width: 775px) and (max-width: 820px) {
+    #body_2_spotlight {
+      width: 77.5%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    #body_1_spotlightContainer {
+      background: url(/~//-/media/adeccogroup/brands/adecco-global-2016/uk/media/contact-bg.ashx)
+        no-repeat center !important;
+      height: 210px;
+    }
+  }
+
+  @media only screen and (min-width: 821px) and (max-width: 870px) {
+    #body_2_spotlight {
+      width: 70%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    #body_1_spotlightContainer {
+      background: url(/~//-/media/adeccogroup/brands/adecco-global-2016/uk/media/contact-bg.ashx)
+        no-repeat center !important;
+      height: 210px;
+    }
+  }
+
+  @media only screen and (min-width: 871px) and (max-width: 1023px) {
+    #body_2_spotlight {
+      width: 62%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    #body_1_spotlightContainer {
+      background: url(/~//-/media/adeccogroup/brands/adecco-global-2016/uk/media/contact-bg.ashx)
+        no-repeat center !important;
+      height: 210px;
+    }
+  }
+
+  @media only screen and (min-width: 1080px) and (max-width: 1100px) {
+    #body_1_spotlightContainer {
+      background-size: cover !important;
+      height: 236px;
+      background: url(/~//-/media/adeccogroup/brands/adecco-global-2016/uk/media/contact-bg.ashx)
+        no-repeat center !important;
+    }
+
+    #body_2_spotlight {
+      margin-top: -144px !important;
+      background: #fff;
+      border-radius: 5px;
+      width: 61.5%;
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .body-inner-title {
+      font-family: "houschka_headmedium";
+      font-size: 18px;
+      text-align: left;
+      color: #d9281c;
+      margin-bottom: 30px;
+    }
+
+    #pageloader img {
+      left: 50% !important;
+      margin-top: 18px !important;
+    }
+
+    input,
+    button,
+    select,
+    textarea {
+      margin-bottom: 12px;
+    }
+
+    .icon-color {
+      font-size: 13px;
+    }
+
+    .m-t-15 {
+      margin-top: 5px;
+    }
+
+    .line-height {
+      line-height: 28px;
+      padding-top: 10px;
+      height: 89px;
+    }
+
+    .for-mobile {
+      display: block;
+    }
+
+    .for-desktop {
+      display: none;
+    }
+
+    #body_2_spotlight {
+      margin-top: -110px;
+      background: #fff;
+      border-radius: 5px;
+    }
+
+    .body-content-form {
+      margin: 35px;
+    }
+
+    .body-title {
+      text-align: center;
+      font-size: 20px;
+      line-height: 27px;
+    }
+
+    .form-control {
+      font-size: 16px;
+      height: 43px;
+    }
+
+    #sendButton {
+      width: 37%;
+      height: 45px;
+      border-radius: 5px;
+      background: linear-gradient(#d8281e 0%, #c3183a 100%);
+      border: none;
+      color: #fff;
+      font-size: 20px;
+      font-family: "houschka_headmedium";
+      margin-top: 30px;
+      line-height: 40px;
+      margin-left: 180px;
+    }
+
+    .angle-duble-icon {
+      float: right;
+      font-size: 27px;
+      margin-top: 7px;
+    }
+
+    .txt-small {
+      font-family: "houschka_headmedium";
+      font-size: 12px;
+      line-height: 15px;
+      text-align: left;
+      color: #707070;
+      width: 100%;
+    }
+
+    .check-text {
+      font-family: "Nunito";
+      font-weight: normal;
+      font-size: 15px;
+      text-align: left;
+      color: #707070;
+    }
+
+    .t-pr-6 {
+      padding-right: 6px;
+    }
+  }
+
+  @media (max-width: 575.98px) {
+    textarea.form-control {
+      height: 140px;
+    }
+
+    .pd-5 {
+      padding-right: 6px;
+      padding-left: 6px;
+    }
+
+    .body-inner-title {
+      font-family: "houschka_headmedium";
+      font-size: 18px;
+      text-align: center;
+      line-height: 24px;
+      color: #d9281c;
+      margin-bottom: 8%;
+      padding-top: 5%;
+    }
+    select {
+      background: url(-/media/3d749a264eb5402baceb3fedd56ba229.ashx) no-repeat
+        right !important;
+      -webkit-appearance: none;
+      background-position-x: 97% !important;
+    }
+
+    .display-none-for-mobile {
+      display: none;
+    }
+
+    #pageloader img {
+      left: 50% !important;
+      margin-top: 5px !important;
+      top: 88%;
+    }
+
+    .icon-color {
+      font-size: 13px;
+    }
+
+    input,
+    button,
+    select,
+    textarea {
+      margin-bottom: 8px;
+    }
+
+    .m-t-15 {
+      margin-top: 5px;
+    }
+
+    .line-height {
+      line-height: 39px;
+    }
+
+    .for-mobile {
+      display: block;
+    }
+
+    .for-desktop {
+      display: none;
+    }
+
+    #body_2_spotlightContainer {
+      background: #f0f0f0 !important;
+    }
+
+    #body_2_spotlight {
+      margin-top: -22px;
+      border-radius: 0;
+      margin-bottom: 50px;
+      background: #f0f0f0 !important;
+    }
+
+    .body-title {
+      font-size: 20px;
+      line-height: 27px;
+      text-align: center;
+      width: 80%;
+      padding-top: 5%;
+      margin: 0px auto 38px;
+    }
+
+    .form-control {
+      font-family: "Nunito";
+      font-size: 14px;
+      height: 35px;
+      margin-top: 0;
+      margin-bottom: -3%;
+    }
+    .ma-hidden {
+      color: red;
+      padding-bottom: 8%;
+    }
+    .error {
+      margin-bottom: 3% !important;
+    }
+    #sendButton {
+      font-size: 20px;
+    }
+
+    .angle-duble-icon {
+      font-size: 26px;
+      margin-top: 7px;
+    }
+
+    .check-text {
+      font-size: 16px;
+    }
+
+    .txt-small {
+      font-family: "houschka_headmedium";
+      font-size: 12px;
+      line-height: 15px;
+    }
+
+    #ps-banner {
+      margin: auto;
+      width: 80%;
+    }
+
+    #sendButton {
+      font-size: 20px;
+      margin-left: 13px;
+      width: 50%;
+      margin-right: 20px;
+      border-radius: 5px;
+      margin-top: 10px;
+      height: 44px;
+    }
+
+    .submit-btn {
+      margin-top: 5%;
+      margin-bottom: 10%;
+      text-align: center;
+    }
+
+    .body-content-form {
+      margin: 15px;
+      margin-top: -20%;
+      border-radius: 10px;
+      background: #fff;
+      padding-left: 0.75rem;
+      padding-right: 0.75rem;
+    }
+  }
+
+  .ab {
+    display: block !important;
+  }
+  @media (min-width: 1024px) and (max-width: 1365px) {
+    .body-inner-title {
+      font-family: "houschka_headmedium";
+      font-size: 18px;
+      text-align: left;
+      color: #d9281c;
+      margin-bottom: 30px;
+    }
+
+    #pageloader img {
+      left: 51.8% !important;
+      margin-top: 23px !important;
+    }
+
+    input,
+    button,
+    select,
+    textarea {
+      margin-bottom: 12px;
+    }
+
+    .icon-color {
+      font-size: 13px;
+    }
+
+    .m-t-15 {
+      margin-top: 5px;
+    }
+
+    .line-height {
+      line-height: 28px;
+      padding-top: 10px;
+      height: 89px;
+    }
+
+    .for-mobile {
+      display: block;
+    }
+
+    .for-desktop {
+      display: none;
+    }
+
+    #body_2_spotlight {
+      margin-top: -127px;
+      background: #fff;
+      border-radius: 5px;
+      width: 61.5%;
+    }
+
+    .body-content-form {
+      margin: 35px;
+    }
+
+    .body-title {
+      text-align: center;
+      font-size: 20px;
+      text-align: center;
+    }
+
+    .form-control {
+      font-size: 16px;
+      height: 43px;
+    }
+
+    #sendButton {
+      width: 37%;
+      height: 45px;
+      margin-top: 30px;
+      margin-left: 199px;
+      font-size: 20px;
+      font-family: "houschka_headmedium";
+      border-radius: 5px;
+    }
+
+    .angle-duble-icon {
+      float: right;
+      font-size: 27px;
+      margin-top: 6px;
+    }
+
+    .txt-small {
+      font-family: "houschka_headmedium";
+      font-size: 12px;
+      line-height: 15px;
+      text-align: left;
+      color: #707070;
+      width: 100%;
+    }
+
+    .faq-title {
+      padding-top: 2%;
+      font-size: 25px;
+      width: 85%;
+      margin: 0;
+      margin-left: 86px;
+    }
+
+    .check-text {
+      font-family: "Nunito";
+      font-weight: normal;
+      font-size: 15px;
+      text-align: left;
+      color: #707070;
+    }
+
+    .t-pr-6 {
+      padding-right: 6px;
+    }
+  }
+</style>
+<script>
+  if ($(window).width() < 576) {
+    document.getElementsByName("input-email")[0].placeholder = "Business email";
+    document.getElementById("service-placeholder").innerHTML = "Service I need";
+    document.getElementById("hire-placeholder").innerHTML = "Number of hires";
+  }
+  if ($(window).width() > 576) {
+    document.getElementsByName("input-email")[0].placeholder =
+      "Business email address";
+    document.getElementById("service-placeholder").innerHTML =
+      "Services I'm interested in";
+    document.getElementById("hire-placeholder").innerHTML =
+      "Number of hires needed";
+    console.log("hi");
+  }
+  $("#input-industry").click(function (event) {
+    var selectedText = $("#input-industry :selected").text();
+
+    if (selectedText == "Other, please specify") {
+      $(".workIn-div").show();
+      $(".display-none-for-mobile").show();
+    } else {
+      $(".workIn-div").hide();
+      $(".display-none-for-mobile").hide();
+    }
+  });
+
+  function showDiv(divId, otherId, element) {
+    if (
+      element.value == "Permanent recruitment" ||
+      element.value == "Temporary recruitment" ||
+      element.value == "Recruitment process outsourcing"
+    ) {
+      let numberOfHire = document.getElementById(divId);
+      let otherSpecific = document.getElementById(otherId);
+      numberOfHire.classList.add("ab");
+      otherSpecific.classList.remove("ab");
+    } else if (element.value == "Other") {
+      let numberOfHire = document.getElementById(divId);
+      let otherSpecific = document.getElementById(otherId);
+      numberOfHire.classList.remove("ab");
+      otherSpecific.classList.add("ab");
+    } else {
+      let numberOfHire = document.getElementById(divId);
+      let otherSpecific = document.getElementById(otherId);
+      numberOfHire.classList.remove("ab");
+      otherSpecific.classList.remove("ab");
+    }
+  }
+
+  var commentValue;
+  var firstnameValue;
+  var lastnameValue;
+  var companyValue;
+  var jobtitleValue;
+  var emailValue;
+  var email2Value;
+  var phoneValue;
+  var postcodeValue;
+  var industryValue;
+  var otherIndustryValue = "";
+  var servicesValue;
+  var otherServicesValue = "";
+  var numberofHiresValue;
+  var privacypolicyValue;
+  var marketingoptinValue;
+  var lastpageValue = document.referrer;
+
+  function validatePostcode(type) {
+    postcodeValue = document.getElementById("input-location").value;
+
+    if (postcodeValue == "") {
+      document.getElementById("error-location").innerHTML = "Required field.";
+      document.getElementById("error-location").classList.add("ma-hidden");
+      document.getElementById("input-location").className =
+        "form-control error";
+      $("#error-location").show();
+      if (type == "change") {
+        leadsFormToGTM("change", "fail", "empty", "", "location");
+      }
+      return false;
+    } else {
+      if (type == "change") {
+        leadsFormToGTM("change", "success", "", "", "location");
+      }
+      document.getElementById("error-location").classList.remove("ma-hidden");
+      document.getElementById("input-location").className =
+        "form-control valid";
+      $("#error-location").hide();
+      return true;
+    }
+  }
+
+  //Validate Jobtitle
+  function validateJobtitle(type) {
+    jobtitleValue = document.getElementById("input-jobtitle").value;
+
+    if (jobtitleValue == "") {
+      document.getElementById("error-jobtitle").innerHTML = "Required field.";
+      document.getElementById("error-jobtitle").classList.add("ma-hidden");
+      document.getElementById("input-jobtitle").className =
+        "form-control error";
+      $("#error-jobtitle").show();
+      if (type == "change") {
+        leadsFormToGTM("change", "fail", "empty", "", "jobtitle");
+      }
+      return false;
+    } else {
+      if (type == "change") {
+        leadsFormToGTM("change", "success", "", "", "jobtitle");
+      }
+      document.getElementById("error-jobtitle").classList.add("ma-hidden");
+      document.getElementById("input-jobtitle").className =
+        "form-control valid";
+      $("#error-jobtitle").hide();
+      return true;
+    }
+  }
+  //Validate Comment
+  function validateComment(type) {
+    commentValue = document.getElementById("input-comment").value;
+
+    if (commentValue == "") {
+      document.getElementById("error-comment").innerHTML = "Required field.";
+      document.getElementById("error-comment").classList.add("ma-hidden");
+      document.getElementById("input-comment").className = "form-control error";
+      $("#error-comment").show();
+      if (type == "change") {
+        leadsFormToGTM("change", "fail", "empty", "", "comment");
+      }
+      return false;
+    } else {
+      if (type == "change") {
+        leadsFormToGTM("change", "success", "", "", "comment");
+      }
+      document.getElementById("error-comment").classList.remove("ma-hidden");
+      document.getElementById("input-comment").className = "form-control valid";
+      $("#error-comment").hide();
+      return true;
+    }
+  }
+
+  //Validate Company Name
+  function validateCompany(type) {
+    companyValue = document.getElementById("input-company").value;
+
+    if (companyValue == "") {
+      document.getElementById("error-company").innerHTML = "Required field.";
+      document.getElementById("error-company").classList.add("ma-hidden");
+      document.getElementById("input-company").className = "form-control error";
+      $("#error-company").show();
+      if (type == "change") {
+        leadsFormToGTM("change", "fail", "empty", "", "company");
+      }
+
+      return false;
+    } else {
+      document.getElementById("error-company").classList.add("ma-hidden");
+      document.getElementById("input-company").className = "form-control valid";
+      $("#error-company").hide();
+      if (type == "change") {
+        leadsFormToGTM("change", "success", "", "", "company");
+      }
+      return true;
+    }
+  }
+
+  //Validate FirstName
+  function validateFirstName(type) {
+    firstnameValue = document.getElementById("input-firstname").value;
+
+    if (firstnameValue == "") {
+      document.getElementById("error-firstname").innerHTML = "Required field.";
+      document.getElementById("error-firstname").classList.add("ma-hidden");
+      document.getElementById("input-firstname").className =
+        "form-control error";
+      $("#error-firstname").show();
+      if (type == "change") {
+        leadsFormToGTM("change", "fail", "empty", "", "firstname");
+      }
+      return false;
+    } else {
+      if (type == "change") {
+        leadsFormToGTM("change", "success", "", "", "firstname");
+      }
+      document.getElementById("error-firstname").classList.remove("ma-hidden");
+      document.getElementById("input-firstname").className =
+        "form-control valid";
+      $("#error-firstname").hide();
+      return true;
+    }
+  }
+
+  //Validate LastName
+  function validateLastName(type) {
+    lastnameValue = document.getElementById("input-lastname").value;
+
+    if (lastnameValue == "") {
+      if (type == "change") {
+        leadsFormToGTM("change", "fail", "empty", "", "lastname");
+      }
+
+      document.getElementById("error-lastname").innerHTML = "Required field.";
+      document.getElementById("error-lastname").classList.add("ma-hidden");
+      document.getElementById("input-lastname").className =
+        "form-control error";
+      $("#error-lastname").show();
+      return false;
+    } else {
+      if (type == "change") {
+        leadsFormToGTM("change", "success", "", "", "lastname");
+      }
+      document.getElementById("error-lastname").classList.remove("ma-hidden");
+      document.getElementById("input-lastname").className =
+        "form-control valid";
+      $("#error-lastname").hide();
+      return true;
+    }
+  }
+  // Validate Email
+  function validateEmail(type) {
+    emailValue = document
+      .getElementById("input-email")
+      .value.replace(/\s/g, "");
+    document.getElementById("input-email").value = emailValue;
+
+    if (emailValue == "") {
+      if (type == "change") {
+        leadsFormToGTM("change", "fail", "empty", "", "email");
+      }
+
+      document.getElementById("error-email").innerHTML = "Required field.";
+      document.getElementById("error-email").classList.add("ma-hidden");
+      document.getElementById("input-email").className = "form-control error";
+      $("#error-lastname").show();
+      return false;
+    } else if (
+      !/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(
+        emailValue
+      )
+    ) {
+      if (type == "change") {
+        leadsFormToGTM("change", "fail", "wrong syntax", "", "email");
+      }
+      document.getElementById("error-email").innerHTML =
+        "Enter correct email address.";
+      document.getElementById("error-email").classList.add("ma-hidden");
+      document.getElementById("input-email").className = "form-control error";
+      return false;
+    } else if (emailValue.length < 6) {
+      if (type == "change") {
+        leadsFormToGTM("change", "fail", "wrong syntax", "", "email");
+      }
+      document.getElementById("error-email").innerHTML =
+        "Fel format på e-postadress.";
+      document.getElementById("error-email").classList.add("ma-hidden");
+      document.getElementById("input-email").className = "form-control error";
+      return false;
+    } else {
+      if (type == "change") {
+        leadsFormToGTM("change", "success", "", "", "email");
+      }
+      document.getElementById("error-email").classList.remove("ma-hidden");
+      document.getElementById("input-email").className = "form-control valid";
+      $("#error-email").hide();
+      return true;
+    }
+  }
+
+  // Validate Phone
+  function validatePhone(type) {
+    phoneValue = document.getElementById("input-phone").value;
+    if (phoneValue == "") {
+      if (type == "change") {
+        leadsFormToGTM("change", "fail", "empty", "", "phone");
+      }
+      document.getElementById("error-phone").innerHTML = "Required field.";
+      document.getElementById("error-phone").classList.add("ma-hidden");
+      document.getElementById("input-phone").className = "form-control error";
+      $("#error-phone").show();
+      return false;
+    } else if (/[^0123456789+ -]/.test(phoneValue)) {
+      if (type == "change") {
+        leadsFormToGTM("change", "fail", "wrong syntax", "", "phone");
+      }
+      document.getElementById("error-phone").innerHTML =
+        "Enter correct phone nummer.";
+      document.getElementById("error-phone").classList.add("ma-hidden");
+      document.getElementById("input-phone").className = "form-control error";
+      return false;
+    } else {
+      if (type == "change") {
+        leadsFormToGTM("change", "success", "", "", "phone");
+      }
+      document.getElementById("error-phone").classList.remove("ma-hidden");
+      document.getElementById("input-phone").className = "form-control valid";
+      $("#error-phone").hide();
+      return true;
+    }
+  }
+
+  //Validate stay connected
+  function validateStayConnected(type) {
+    privacypolicyValue = $("#input-stayconnected").prop("checked");
+
+    if (privacypolicyValue == false) {
+      privacypolicyValue = "No";
+      document.getElementById("error-stayconnected").innerHTML =
+        "Required field.";
+      document.getElementById("error-stayconnected").classList.add("ma-hidden");
+      // document.getElementById("input-marketing-opt-in").className = "form-control error";
+      $("#error-stayconnected").show();
+      if (type == "change") {
+        leadsFormToGTM("change", "fail", "empty", "", "firstname");
+      }
+      return false;
+    } else {
+      if (type == "change") {
+        leadsFormToGTM("change", "success", "", "", "firstname");
+      }
+      document
+        .getElementById("error-stayconnected")
+        .classList.remove("ma-hidden");
+      document.getElementById("error-stayconnected").className =
+        "form-control valid";
+      $("#error-stayconnected").hide();
+      privacypolicyValue = "Yes";
+      return true;
+    }
+  }
+
+  // //Validate error-marketing-opt-in
+  function ValidatemarketingoptinValue(type) {
+    marketingoptinValue = $("#input-marketing-opt-in").prop("checked");
+
+    if (marketingoptinValue == false) {
+      marketingoptinValue = "No";
+      return true;
+    } else {
+      marketingoptinValue = "Yes";
+      return true;
+    }
+  }
+
+  //Validate Industry
+  function validateIndustry(type) {
+    industryValue = $("#input-industry option:selected").val();
+
+    if (industryValue == "") {
+      document.getElementById("error-industry").innerHTML = "Required field.";
+      document.getElementById("error-industry").classList.add("ma-hidden");
+      document.getElementById("input-industry").className =
+        "form-control error";
+      $("#error-industry").show();
+      if (type == "change") {
+        leadsFormToGTM("change", "fail", "empty", "", "firstname");
+      }
+      return false;
+    } else {
+      if (type == "change") {
+        leadsFormToGTM("change", "success", "", "", "firstname");
+      }
+      document.getElementById("error-industry").classList.remove("ma-hidden");
+      document.getElementById("input-industry").className =
+        "form-control valid";
+      $("#error-industry").hide();
+      return true;
+    }
+  }
+  //Validate other Industry
+  function validateOtherIndustry(type) {
+    otherIndustryValue = document.getElementById("input-other-industry").value;
+
+    if (otherIndustryValue == "") {
+      document.getElementById("error-other-industry").innerHTML =
+        "Required field.";
+      document
+        .getElementById("error-other-industry")
+        .classList.add("ma-hidden");
+      document.getElementById("input-other-industry").className =
+        "form-control error";
+      $("#error-other-industry").show();
+      if (type == "change") {
+        leadsFormToGTM("change", "fail", "empty", "", "comment");
+      }
+      return false;
+    } else {
+      if (type == "change") {
+        leadsFormToGTM("change", "success", "", "", "comment");
+      }
+      document
+        .getElementById("error-other-industry")
+        .classList.remove("ma-hidden");
+      document.getElementById("input-other-industry").className =
+        "form-control valid";
+      $("#error-other-industry").hide();
+      return true;
+    }
+  }
+
+  //Validate services
+  function validateServices(type) {
+    servicesValue = $("#input-services option:selected").val();
+
+    if (servicesValue == "") {
+      document.getElementById("error-services").innerHTML = "Required field.";
+      document.getElementById("error-services").classList.add("ma-hidden");
+      document.getElementById("input-services").className =
+        "form-control error";
+      $("#error-services").show();
+      if (type == "change") {
+        leadsFormToGTM("change", "fail", "empty", "", "firstname");
+      }
+      return false;
+    } else {
+      if (type == "change") {
+        leadsFormToGTM("change", "success", "", "", "firstname");
+      }
+      document.getElementById("error-services").classList.remove("ma-hidden");
+      document.getElementById("input-services").className =
+        "form-control valid";
+      $("#error-services").hide();
+      return true;
+    }
+  }
+
+  //Validate other services
+  function validateOtherServices(type) {
+    otherServicesValue = document.getElementById("input-other-services").value;
+
+    if (otherServicesValue == "") {
+      document.getElementById("error-other-services").innerHTML =
+        "Required field.";
+      document
+        .getElementById("error-other-services")
+        .classList.add("ma-hidden");
+      document.getElementById("input-other-services").className =
+        "form-control error";
+      $("#error-other-services").show();
+      if (type == "change") {
+        leadsFormToGTM("change", "fail", "empty", "", "comment");
+      }
+      return false;
+    } else {
+      if (type == "change") {
+        leadsFormToGTM("change", "success", "", "", "comment");
+      }
+      document
+        .getElementById("error-other-services")
+        .classList.remove("ma-hidden");
+      document.getElementById("input-other-services").className =
+        "form-control valid";
+      $("#error-other-services").hide();
+      return true;
+    }
+  }
+
+  //Validate numberofHiresValue
+  function validatenumberofHires(type) {
+    numberofHiresValue = $("#input-hires option:selected").val();
+
+    if (numberofHiresValue == "") {
+      document.getElementById("error-hires").innerHTML = "Required field.";
+      document.getElementById("error-hires").classList.add("ma-hidden");
+      document.getElementById("input-hires").className = "form-control error";
+      $("#error-hires").show();
+      if (type == "change") {
+        leadsFormToGTM("change", "fail", "empty", "", "firstname");
+      }
+      return false;
+    } else {
+      if (type == "change") {
+        leadsFormToGTM("change", "success", "", "", "firstname");
+      }
+      document.getElementById("error-hires").classList.remove("ma-hidden");
+      document.getElementById("input-hires").className = "form-control valid";
+      $("#error-hires").hide();
+      return true;
+    }
+  }
+
+  function validateForm() {
+    validateComment();
+    validateFirstName();
+    validateLastName();
+    validateCompany();
+    validateJobtitle();
+    validateEmail();
+    validatePhone();
+    validatePostcode();
+    validateStayConnected();
+    ValidatemarketingoptinValue();
+    validateServices();
+    if (servicesValue == "Other") {
+      validateOtherServices();
+    }
+
+    validateIndustry();
+    if (industryValue == "Other") {
+      validateOtherIndustry();
+    }
+
+    if (
+      servicesValue == "Permanent recruitment" ||
+      servicesValue == "Temporary recruitment" ||
+      servicesValue == "Recruitment process outsourcing"
+    ) {
+      validatenumberofHires();
+    }
+
+    // Form validation success.
+    if (
+      validateCompany() &&
+      validateFirstName() &&
+      validateLastName() &&
+      validateEmail() &&
+      validateComment() &&
+      validateJobtitle() &&
+      validatePostcode() &&
+      validateStayConnected() &&
+      validateServices() &&
+      validateIndustry()
+    ) {
+      $("#sendButton").prop("disabled", true);
+      $("#pageloader").fadeIn();
+      var today = new Date();
+      var dd = today.getDate();
+      var mm = today.getMonth() + 1; //January is 0!
+      var yyyy = today.getFullYear();
+
+      if (dd < 10) {
+        dd = "0" + dd;
+      }
+
+      if (mm < 10) {
+        mm = "0" + mm;
+      }
+
+      today = yyyy + "-" + mm + "-" + dd;
+
+      try {
+        submitForm("");
+      } catch (error) {
+        console.error(error);
+      }
+    }
+  }
+
+  function submitForm(hdnattributionid) {
+    var data = {
+      "input-comment": commentValue,
+      "input-firstname": firstnameValue,
+      "input-lastname": lastnameValue,
+      "input-jobtitle": jobtitleValue,
+      "input-company": companyValue,
+      "input-email": emailValue,
+      "input-phone": phoneValue.replace(/ /g, ""),
+      "input-location": postcodeValue,
+      "input-industry": industryValue,
+      "input-other-industry": otherIndustryValue,
+      "input-services": servicesValue,
+      "input-other-services": otherServicesValue,
+      "input-hires": numberofHiresValue,
+      "input-stayconnected": privacypolicyValue,
+      "input-marketing-opt-in": marketingoptinValue,
+      "input-lastpage": lastpageValue,
+    };
+
+    var uriEncodedParams = $.param(data);
+    var targetUrl =
+      "https://go.pardot.com/l/503591/2022-04-18/26t6186?" + uriEncodedParams;
+
+    $.ajax({
+      url: targetUrl,
+      dataType: "jsonp",
+      jsonpCallback: "JsonpCallback",
+      jsonp: "callback",
+      success: function (msg) {
+        window.location.assign("/employers/thank-you");
+      },
+      error: ServiceFailed,
+    });
+
+    function JsonpCallback(data) {
+      console.log(data);
+      if (data.responseStatus == "200") {
+        window.location.assign("/employers/thank-you");
+      } else {
+        console.log(data.responseDetails);
+      }
+    }
+
+    function ServiceFailed(msg) {
+      setTimeout(console.log("ServiceFailed"), 1000);
+
+      if (msg.status == "200") {
+        window.location.assign("/employers/thank-you");
+      }
+      Type = null;
+      varUrl = null;
+      Data = null;
+      ContentType = null;
+      DataType = null;
+      ProcessData = null;
+    }
+  }
+</script>
+
+<script>
+  $(".js-example-placeholder-single").select2({
+    placeholder: "Select a state",
+    allowClear: true,
+  });
+</script>
+
+<!-- ========================================
+            GCLID Fields
+===========================================-->
+<script type="text/javascript">
+  function setCookie(name, value, days) {
+    var date = new Date();
+    date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+    var expires = "expires=" + date.toGMTString();
+    document.cookie =
+      name +
+      "=" +
+      value +
+      expires +
+      "domain=" +
+      location.hostname.replace("www.", "");
+  }
+  function getParam(p) {
+    var match = RegExp("[?&]" + p + "=([^&]*)").exec(window.location.search);
+    return match && decodeURIComponent(match[1].replace(/+/g, " "));
+  }
+  var gclid = getParam("gclid");
+  if (gclid) {
+    var gclsrc = getParam("gclsrc");
+    if (!gclsrc || gclsrc.indexOf("aw") !== -1) {
+      setCookie("gclid", gclid, 90);
+    }
+  }
+</script>
+
+<script>
+  window.onload = function getGclid() {
+    document.getElementById("input-hidden").value = (name = new RegExp(
+      "(?:^|;\s*)gclid=([^;]*)"
+    ).exec(document.cookie))
+      ? name.split(",")[1]
+      : "";
+  };
+</script>
+<script>
+  var putGCLID = function () {
+    document.getElementById("input-hidden").value = (name = new RegExp(
+      "(?:^|;\s*)gclid=([^&]*)"
+    ).exec(document.cookie))
+      ? name.split(",")[1]
+      : "";
+  };
+  document
+    .getElementById("sendButton")
+    .addEventListener("click", putGCLID, true);
+</script>

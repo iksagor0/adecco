@@ -1,0 +1,125 @@
+<div id="popular_roles">
+    <div class="container">
+        <h2 class="popular_title section_title">Popular popular Roles</h2>
+
+        <div class="content_container">
+            <div class="popular_content">
+                <div class="text_area">
+                    <h4 class="content_title text_white">popular Consultant</h4>
+                    <p>A Police Officer is a law enforcement professional whose primary duties are to protect people and
+                        property, maintain public order, and enforce laws. Police officers patrol assigned areas,
+                        respond to emergency calls, investigate suspicious activities, and apprehend suspects.</p>
+                </div>
+
+                <div class="image_area">
+                    <img src="-/media/364a48ca40b840b9ba31579acca55ace.ashx" alt="">
+                </div>
+            </div>
+
+            <div class="popular_content reverse_content">
+                <div class="image_area">
+                    <img src="-/media/364a48ca40b840b9ba31579acca55ace.ashx" alt="">
+                </div>
+
+                <div class="text_area">
+                    <h4 class="content_title text_white">popular Consultant</h4>
+                    <p>As a detective, you are responsible for investigating crime and gathering evidence to support
+                        criminal cases. You may be involved in interrogations, searches, surveillance, and interviewing
+                        witnesses. You will be expected to be able to identify patterns in criminal activity and
+                        identify potential suspects. The work of a detective involves a lot of legwork and paperwork, as
+                        well as long hours and intense pressure. You must be able to think logically and quickly when
+                        gathering evidence and working on a case. Working as a detective can be challenging, but it can
+                        also be incredibly satisfying when you are able to put together pieces of a puzzle and solve a
+                        case.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+<!-- ====================================================== -->
+<!--                  popular roles CSS                     -->
+<!-- ====================================================== -->
+<style>
+    #popular_roles .popular_title {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    /* Section Content */
+    #popular_roles .content_container {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    #popular_roles .popular_content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        background: #D72721;
+    }
+
+    #popular_roles .popular_content .text_area {
+        padding: 20px;
+        padding-left: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #popular_roles .popular_content.reverse_content .text_area {
+        padding: 20px;
+        padding-left: 20px;
+        padding-right: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #popular_roles .popular_content .image_area img {
+        clip-path: polygon(14% 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    #popular_roles .popular_content.reverse_content .image_area img {
+        clip-path: polygon(0 0, 86% 0, 100% 100%, 0% 100%);
+    }
+
+    #popular_roles .popular_content .content_title {
+        color: #fff;
+        margin-bottom: 10px;
+    }
+
+    #popular_roles .popular_content .text_area p {
+        color: #fff;
+        font-size: clamp(0.94rem, calc(0.88rem + 0.31vw), 1.125rem);
+        line-height: clamp(1.38rem, calc(1.31rem + 0.31vw), 1.45rem);
+    }
+
+    @media screen and (max-width: 1199px) {
+        #popular_roles .popular_content {
+            grid-template-columns: 1fr;
+        }
+
+        /* Resverse */
+        #popular_roles .popular_content .text_area {
+            position: relative;
+            order: 1;
+            padding: 40px !important;
+
+        }
+
+        #popular_roles .popular_content .image_area img {
+            clip-path: none;
+        }
+
+        #popular_roles .popular_content.reverse_content .image_area img {
+            clip-path: none;
+        }
+    }
+</style>

@@ -1,0 +1,1271 @@
+<style>
+  .in-d-tit {
+    font-size: 25px;
+    line-height: 34px;
+    text-align: left;
+    color: #000;
+  }
+
+  .with-heading {
+    font-family: "houschka_headmedium";
+  }
+  .without-heading {
+    font-family: "houschka_headdemibold";
+  }
+  #pageloader {
+    background: rgba(255, 255, 255, 0.8);
+    display: none;
+  }
+  #pageloader img {
+    left: 58%;
+    margin-left: -32px;
+    margin-top: -32px;
+    position: absolute;
+    top: 85%;
+    width: 30px;
+    height: 30px;
+  }
+  #pageloader img {
+    left: 34% !important;
+    margin-top: -20px !important;
+  }
+  .ma-hidden {
+    font-size: 16px !important;
+  }
+  .faq_box {
+    display: flex;
+  }
+  .faq_details {
+    width: 50%;
+    display: flex;
+  }
+  .faq_text {
+    font-size: 40px;
+    width: 98%;
+    color: #8e8e8e;
+    margin-top: 5px;
+    line-height: 40px;
+    margin-left: 5px;
+  }
+  .info_box {
+    margin-bottom: 25px;
+  }
+  .info_title {
+    font-size: 26px;
+    font-family: "houschka_headbold";
+    color: #8e8e8e;
+    margin-bottom: 1%;
+    line-height: 34px;
+  }
+  .info_details {
+    font-size: 20px;
+    font-family: "houschka_headmedium";
+    line-height: 120%;
+  }
+  .d-flex {
+    display: flex;
+  }
+  #form {
+    margin: 0 auto;
+  }
+  .form-field {
+    margin: 0 0 1rem 0;
+    width: 50%;
+  }
+  .form-section {
+    margin-bottom: 150px;
+  }
+  .form-field input {
+    width: 96% !important;
+    height: 60px;
+    padding: 0.5rem;
+    box-sizing: border-box;
+    border: 1px solid #b2b2b2;
+    border-radius: 3px;
+    box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    color: #000;
+  }
+  .form-field label {
+    display: block;
+    font-family: "houschka_headdemibold" !important;
+    font-size: 24px;
+    color: #da291c !important;
+    line-height: 26px;
+    margin-top: 11px;
+    margin-bottom: 11px;
+  }
+  .form-field select {
+    width: 100% !important;
+    height: 58px;
+    padding: 0.5rem;
+    box-sizing: border-box;
+    border: 1px solid #b2b2b2;
+    border-radius: 7px;
+    box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    color: #000;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    cursor: pointer;
+  }
+  .custom-selectbox {
+    position: relative;
+    width: 96%;
+  }
+  .custom-selectbox:after {
+    content: "";
+    height: 0;
+    width: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #000;
+    position: absolute;
+    right: 10px;
+    bottom: 26px;
+    transition: all 0.3s linear;
+  }
+  .custom-selectbox.open:after {
+    -webkit-transform: rotate(-180deg);
+    -moz-transform: rotate(-180deg);
+    -o-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+  }
+  .submit_btn {
+    display: inline-block;
+    font-size: 22px;
+    font-weight: 700;
+    border: none;
+    border-radius: 7px;
+    text-shadow: none;
+    box-shadow: none;
+    transition: all 0.5s ease-in-out;
+    padding: 15px 25px;
+    color: #fff;
+    background: linear-gradient(#d72720 0%, #c3193c 100%);
+    margin-top: 20px;
+  }
+  .top-box {
+    margin-top: 40px;
+    margin-bottom: 45px;
+  }
+  .red-line {
+    background-color: #bf0d3e;
+    height: 3px;
+    margin-top: 60px;
+    margin-bottom: 50px;
+  }
+  .form_title {
+    font-size: 40px;
+    font-family: "houschka_headdemibold";
+    line-height: 44px;
+  }
+  #select-1 {
+    display: none;
+    /* padding-left: 100px; */
+  }
+  #select-2 {
+    display: none;
+    /* padding-left: 100px; */
+  }
+  .red-line-2 {
+    background-color: #bf0d3e;
+    height: 3px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .m-t-25 {
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+  @media (max-width: 575px) {
+    .info_details {
+      font-size: 15px !important;
+    }
+    .in-d-tit {
+      font-size: 20px;
+      line-height: 25px;
+    }
+
+    .info_title {
+      font-size: 20px;
+      line-height: 26px;
+    }
+  }
+  @media (min-width: 576px) and (max-width: 991.98px) {
+    .form_title {
+      font-size: 25px;
+      font-family: "houschka_headdemibold";
+    }
+    .info_details {
+      font-size: 20px;
+    }
+    .info_title {
+      font-size: 23px;
+      line-height: 30px;
+    }
+    .in-d-tit {
+      font-size: 22px;
+      line-height: 30px;
+    }
+  }
+</style>
+
+<!-- MY CSS -->
+<style>
+  /* #form .checkbox_field {
+  } */
+  #form .checkbox_field input {
+    margin-right: 10px;
+  }
+  #form .checkbox_field p {
+    font-family: "houschka_headmedium";
+    font-weight: 300;
+    display: inline;
+  }
+
+  #checkbox_area {
+    display: none;
+  }
+
+  #privacy_error {
+    color: #da291c !important;
+    display: none;
+    padding-left: 28px;
+  }
+</style>
+
+<section>
+  <div class="info_box">
+    <p class="m-t-25 in-d-tit without-heading">
+      Following on from the Spring edition published in March, we have seen a
+      year of significant change. As we publish the Winter edition, we now face
+      a cost of living crisis, unprecedented energy bills, the war in Ukraine,
+      soaring inflation and a turbulent political landscape have all contributed
+      to a difficult economic period. With talent shortages prevailing
+      throughout this time and unemployment at 3.5%, its lowest level for nearly
+      50 years, recruiting and retaining staff remains a top priority for many
+      organisations.  
+    </p>
+  </div>
+  <div class="red-line-2">&nbsp;</div>
+  <div class="info_box">
+    <p class="info_title">Labour market expertise</p>
+    <p class="in-d-tit with-heading">
+      We look at the overall picture, at differences between sectors, and at the
+      outlook for the 12 regions of the UK, with insight from Adecco’s regional
+      experts.
+    </p>
+  </div>
+  <div class="info_box">
+    <p class="info_title">Objective salary data</p>
+    <p class="in-d-tit with-heading">
+      Our salaries are derived from Lightcast data &ndash; which is harvested
+      from tens of thousands of job boards and updated every month with between
+      800,000 and 1 million new unique postings.
+    </p>
+  </div>
+  <div class="info_box">
+    <p class="info_title">Insight for the future</p>
+    <p class="in-d-tit with-heading">
+      In partnership with Oxford Economics, we suggest what is likely to happen
+      to the labour market in 2022 and 2023, and what the longer-term prospects
+      might be.
+    </p>
+  </div>
+  <div class="red-line"></div>
+  <div id="labourmarket"></div>
+</section>
+
+<!-- ====================================================== -->
+<!--                      FORM SECTION                      -->
+<!-- ====================================================== -->
+<div class="form-section">
+  <p class="form_title">
+    Get your copy of the Adecco Labour Market Outlook 2022
+  </p>
+
+  <div id="form" class="validate">
+    <!-- I AM  -->
+    <div class="d-flex">
+      <div class="form-field">
+        <label for="password-input">I am</label>
+
+        <div id="select" class="custom-selectbox">
+          <select
+            name="input-iam"
+            class="custom-select"
+            required
+            onchange="showDiv(this)"
+            id="input-iam"
+            aria-describedby="input-iam"
+          >
+            <option value="" disabled selected hidden>Select</option>
+            <option value="1">An employee / Jobseeker</option>
+            <option value="2">An employer</option>
+          </select>
+
+          <label id="error-type" class="ma-hidden"></label>
+        </div>
+      </div>
+    </div>
+
+    <!-- ======= SELECT 1 SECTION -->
+    <div id="select-1">
+      <!-- Name -->
+      <div class="d-flex d-flex-first">
+        <div class="form-field">
+          <label for="full-name">First Name*</label>
+          <input
+            type="text"
+            name="input-firstname"
+            id="input-firstname"
+            aria-describedby="input-firstname"
+            placeholder="Insert first name here"
+          />
+          <label id="error-firstname" class="ma-hidden"></label>
+        </div>
+        <div class="form-field">
+          <label for="last-name">Last Name*</label>
+          <input
+            type="text"
+            name="input-lastname"
+            id="input-lastname"
+            aria-describedby="input-lastname"
+            placeholder="Insert last name here"
+          />
+          <label id="error-lastname" class="ma-hidden"></label>
+        </div>
+      </div>
+
+      <!-- Email Number -->
+      <div class="d-flex">
+        <div class="form-field">
+          <label for="job-title">Email*</label>
+          <input
+            type="text"
+            id="input-email"
+            name="input-email"
+            aria-describedby="input-email"
+            placeholder="Email"
+          />
+          <label id="error-email" class="ma-hidden"></label>
+        </div>
+        <div class="form-field">
+          <label for="job-title">Phone number*</label>
+          <input
+            type="text"
+            id="input-phone"
+            name="input-phone"
+            aria-describedby="input-phone"
+            placeholder="Phone number"
+          />
+          <label id="error-phone" class="ma-hidden"></label>
+        </div>
+      </div>
+
+      <!-- Option for adecco consultant  -->
+      <div class="d-flex">
+        <div class="form-field">
+          <label for="password-input"
+            >Do you want to speak to an Adecco consultant about new work
+            opportunities?*</label
+          >
+          <div id="select" class="custom-selectbox">
+            <select
+              name="input-immediateHiring"
+              class="custom-select"
+              id="input-immediateHiring"
+              aria-describedby="input-immediateHiring"
+            >
+              <option value="" disabled selected hidden>Select</option>
+              <option value="yes">Yes</option>
+              <option value="no">No</option>
+            </select>
+
+            <label id="error-immediateHiring" class="ma-hidden"></label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===========================================================
+                          SELECT 2 SECTION 
+    ============================================================= -->
+    <div id="select-2">
+      <!-- Name -->
+      <div class="d-flex d-flex-first">
+        <div class="form-field">
+          <label for="full-name">First Name*</label>
+          <input
+            type="text"
+            name="input-firstname-employer"
+            id="input-firstname-employer"
+            aria-describedby="input-firstname-employer"
+            placeholder="Insert first name here"
+          />
+          <label id="error-firstname-employer" class="ma-hidden"></label>
+        </div>
+        <div class="form-field">
+          <label for="last-name">Last Name*</label>
+          <input
+            type="text"
+            name="input-lastname-employer"
+            id="input-lastname-employer"
+            aria-describedby="input-lastname-employer"
+            placeholder="Insert last name here"
+          />
+          <label id="error-lastname-emp" class="ma-hidden"></label>
+        </div>
+      </div>
+      <!-- Email Number -->
+      <div class="d-flex">
+        <div class="form-field">
+          <label for="job-title">Company Email*</label>
+          <input
+            type="text"
+            id="input-company-email"
+            name="input-email"
+            aria-describedby="input-email"
+            placeholder="Email"
+          />
+          <label id="error-company-email" class="ma-hidden"></label>
+        </div>
+        <div class="form-field">
+          <label for="job-title">Phone number*</label>
+          <input
+            type="text"
+            id="input-emp-phone"
+            name="input-phone"
+            aria-describedby="input-phone"
+            placeholder="Phone number"
+          />
+          <label id="error-emp-phone" class="ma-hidden"></label>
+        </div>
+      </div>
+
+      <!-- Company Information -->
+      <div class="d-flex">
+        <div class="form-field">
+          <label for="job-title">Company Name*</label>
+          <input
+            type="text"
+            id="input-company-name"
+            name="input-company-name"
+            aria-describedby="input-company-name"
+            placeholder="company-name"
+          />
+          <label id="error-company-name" class="ma-hidden"></label>
+        </div>
+
+        <div class="form-field">
+          <label for="password-input"
+            >Have you previously worked with Adecco?*</label
+          >
+          <div id="select" class="custom-selectbox">
+            <select
+              name="input-previous-worked"
+              class="custom-select"
+              id="input-previous-worked"
+              aria-describedby="input-previous-worked"
+            >
+              <option value="" disabled selected hidden>Select</option>
+              <option value="yes">Yes</option>
+              <option value="no">No</option>
+            </select>
+
+            <label id="error-previous-worked" class="ma-hidden"></label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Option for adecco consultant AND Industry -->
+      <div class="d-flex">
+        <div class="form-field">
+          <label for="password-input"
+            >Do you want to speak to an Adecco consultant about new work
+            opportunities?*</label
+          >
+          <div id="select" class="custom-selectbox">
+            <select
+              name="input-speak-adecco"
+              class="custom-select"
+              id="input-speak-adecco"
+              aria-describedby="input-speak-adecco"
+            >
+              <option value="" disabled selected hidden>Select</option>
+              <option value="yes">Yes</option>
+              <option value="no">No</option>
+            </select>
+
+            <label id="error-speak-adecco" class="ma-hidden"></label>
+          </div>
+        </div>
+
+        <div class="form-field">
+          <label for="job-title">Industry*</label>
+          <input
+            type="text"
+            id="input-industry"
+            name="input-industry"
+            aria-describedby="input-industry"
+            placeholder="Insert your industry here / Other"
+          />
+          <label id="error-industry" class="ma-hidden"></label>
+        </div>
+      </div>
+    </div>
+
+    <!-- ======= CHECKBOX AREA -->
+    <div class="checkbox_area" id="checkbox_area">
+      <div class="checkbox_field">
+        <label for="latest_update">
+          <input type="checkbox" id="latest_update" />
+          <p>I want to receive the latest news & updates from Adecco</p>
+        </label>
+      </div>
+      <div class="checkbox_field">
+        <label for="agree">
+          <input type="checkbox" id="agree" />
+          <p>I have read and agree to the Privacy Policy*</p>
+          <label id="privacy_error" class="ma-hidden">Required field.</label>
+        </label>
+      </div>
+    </div>
+
+    <!-- ======= SUBMIT BUTTON ======= -->
+    <div class="form-field btn-sec">
+      <div id="pageloader" class="loader">
+        <img
+          src="https://www.adecco.co.uk/~/media/AdeccoGroup/Brands/Adecco%20Global%202016/UK/media/loader-large.gif"
+          alt="processing..."
+          width="10%"
+          height="10%"
+        />
+      </div>
+      <button
+        id="sendButton"
+        name="myButton"
+        class="submit_btn"
+        onclick="validateForm()"
+      >
+        Get the Adecco Labour Market Outlook 2023
+      </button>
+    </div>
+  </div>
+
+  <!-- ====================================================== -->
+  <!--                          SCRIPT                        -->
+  <!-- ====================================================== -->
+  <script>
+    function showDiv(select) {
+      if (select.value == 1) {
+        document.getElementById("select-1").style.display = "block";
+        document.getElementById("checkbox_area").style.display = "block";
+        document.getElementById("select-2").style.display = "none";
+      }
+      if (select.value == 2) {
+        document.getElementById("select-1").style.display = "none";
+        document.getElementById("checkbox_area").style.display = "block";
+        document.getElementById("select-2").style.display = "block";
+
+        $("#error-location").hide();
+
+        $("#error-phone").hide();
+        $("#error-company").hide();
+
+        $("#input-phone").removeAttr("required");
+
+        $("#input-location").removeAttr("required");
+        $("#input-company").removeAttr("required");
+      }
+    }
+
+    // Common
+    var typeValue;
+    var typetext;
+    var hdnattributionid; // unknown
+    let updateCheckbox = false;
+    let agreeCheckbox = false;
+
+    // Select 1 values
+    var firstnameValue;
+    var lastnameValue;
+    var emailValue;
+    var phoneValue;
+    var immediateHiringNeedsValue = "NA";
+
+    // Select 2 values
+    let empFirstnameValue;
+    let empLastnameValue;
+    let companyEmail;
+    let empPhoneValue;
+    var companyValue = "NA";
+    let previousWorkedValue;
+    let speakConsultantValue;
+    let industryValue;
+
+    /* *************************************************************
+                    SELECT 1 SECTION
+    ************************************************************* */
+    // Validate FirstName -
+    function validateFirstName(type) {
+      firstnameValue = document.getElementById("input-firstname").value;
+
+      if (firstnameValue == "") {
+        document.getElementById("error-firstname").innerHTML =
+          "Required field.";
+        document.getElementById("error-firstname").classList.add("ma-hidden");
+        document.getElementById("input-firstname").className =
+          "form-control error";
+        $("#error-firstname").show();
+        if (type == "change") {
+          leadsFormToGTM("change", "fail", "empty", "", "firstname");
+        }
+        return false;
+      } else {
+        if (type == "change") {
+          leadsFormToGTM("change", "success", "", "", "firstname");
+        }
+        document
+          .getElementById("error-firstname")
+          .classList.remove("ma-hidden");
+        document.getElementById("input-firstname").className =
+          "form-control valid";
+        $("#error-firstname").hide();
+        return true;
+      }
+    }
+
+    //Validate LastName -
+    function validateLastName(type) {
+      lastnameValue = document.getElementById("input-lastname").value;
+
+      if (lastnameValue == "") {
+        if (type == "change") {
+          leadsFormToGTM("change", "fail", "empty", "", "lastname");
+        }
+
+        document.getElementById("error-lastname").innerHTML = "Required field.";
+        document.getElementById("error-lastname").classList.add("ma-hidden");
+        document.getElementById("input-lastname").className =
+          "form-control error";
+        $("#error-lastname").show();
+        return false;
+      } else {
+        if (type == "change") {
+          leadsFormToGTM("change", "success", "", "", "lastname");
+        }
+        document.getElementById("error-lastname").classList.remove("ma-hidden");
+        document.getElementById("input-lastname").className =
+          "form-control valid";
+        $("#error-lastname").hide();
+        return true;
+      }
+    }
+
+    // Validate Email -
+    function validateEmail(type) {
+      emailValue = document
+        .getElementById("input-email")
+        .value.replace(/\s/g, "");
+      document.getElementById("input-email").value = emailValue;
+
+      if (emailValue == "") {
+        if (type == "change") {
+          leadsFormToGTM("change", "fail", "empty", "", "email");
+        }
+
+        document.getElementById("error-email").innerHTML = "Required field.";
+        document.getElementById("error-email").classList.add("ma-hidden");
+        document.getElementById("input-email").className = "form-control error";
+        $("#error-lastname").show();
+        return false;
+      } else if (
+        !/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(
+          emailValue
+        )
+      ) {
+        if (type == "change") {
+          leadsFormToGTM("change", "fail", "wrong syntax", "", "email");
+        }
+        document.getElementById("error-email").innerHTML =
+          "Enter correct email address.";
+        document.getElementById("error-email").classList.add("ma-hidden");
+        document.getElementById("input-email").className = "form-control error";
+        return false;
+      } else if (emailValue.length < 6) {
+        if (type == "change") {
+          leadsFormToGTM("change", "fail", "wrong syntax", "", "email");
+        }
+        document.getElementById("error-email").innerHTML =
+          "Fel format på e-postadress.";
+        document.getElementById("error-email").classList.add("ma-hidden");
+        document.getElementById("input-email").className = "form-control error";
+        return false;
+      } else {
+        if (type == "change") {
+          leadsFormToGTM("change", "success", "", "", "email");
+        }
+        document.getElementById("error-email").classList.remove("ma-hidden");
+        document.getElementById("input-email").className = "form-control valid";
+        $("#error-email").hide();
+        return true;
+      }
+    }
+
+    // Validate Phone -
+    function validatePhone(type) {
+      phoneValue = document.getElementById("input-phone").value;
+      if (phoneValue == "") {
+        if (type == "change") {
+          leadsFormToGTM("change", "fail", "empty", "", "phone");
+        }
+        document.getElementById("error-phone").innerHTML = "Required field.";
+        document.getElementById("error-phone").classList.add("ma-hidden");
+        document.getElementById("input-phone").className = "form-control error";
+        $("#error-phone").show();
+        return false;
+      } else if (/[^0123456789+ -]/.test(phoneValue)) {
+        if (type == "change") {
+          leadsFormToGTM("change", "fail", "wrong syntax", "", "phone");
+        }
+        document.getElementById("error-phone").innerHTML =
+          "Enter correct phone nummer.";
+        document.getElementById("error-phone").classList.add("ma-hidden");
+        document.getElementById("input-phone").className = "form-control error";
+        return false;
+      } else {
+        if (type == "change") {
+          leadsFormToGTM("change", "success", "", "", "phone");
+        }
+        document.getElementById("error-phone").classList.remove("ma-hidden");
+        document.getElementById("input-phone").className = "form-control valid";
+        $("#error-phone").hide();
+        return true;
+      }
+    }
+
+    // Validate immediate Hiring Needs -
+    function validateimmediateHiring(type) {
+      immediateHiringNeedsValue = $("#input-immediateHiring :selected").text();
+
+      if (
+        immediateHiringNeedsValue == "" ||
+        immediateHiringNeedsValue == "Select"
+      ) {
+        if (type == "change") {
+          leadsFormToGTM("change", "fail", "empty", "", "immediateHiring");
+        }
+
+        document.getElementById("error-immediateHiring").innerHTML =
+          "Required field.";
+        document
+          .getElementById("error-immediateHiring")
+          .classList.add("ma-hidden");
+        document.getElementById("input-immediateHiring").className =
+          "form-control error";
+        $("#error-immediateHiring").show();
+        return false;
+      } else {
+        if (type == "change") {
+          leadsFormToGTM("change", "success", "", "", "immediateHiring");
+        }
+        document
+          .getElementById("error-immediateHiring")
+          .classList.remove("ma-hidden");
+        document.getElementById("input-immediateHiring").className =
+          "form-control valid";
+        $("#error-immediateHiring").hide();
+        return true;
+      }
+    }
+
+    /* *************************************************************
+                    SELECT 2 SECTION
+    ************************************************************* */
+    // Validate FirstName -
+    function validateEmployerFirstName(type) {
+      empFirstnameValue = document.getElementById(
+        "input-firstname-employer"
+      ).value;
+
+      if (employerfirstnameValue == "") {
+        document.getElementById("error-firstname-employer").innerHTML =
+          "Required field.";
+        document
+          .getElementById("error-firstname-employer")
+          .classList.add("ma-hidden");
+        document.getElementById("input-firstname-employer").className =
+          "form-control error";
+        $("#error-firstname-employer").show();
+        if (type == "change") {
+          leadsFormToGTM("change", "fail", "empty", "", "firstname");
+        }
+        return false;
+      } else {
+        if (type == "change") {
+          leadsFormToGTM("change", "success", "", "", "firstname");
+        }
+        document
+          .getElementById("error-firstname-employer")
+          .classList.remove("ma-hidden");
+        document.getElementById("error-firstname-employer").className =
+          "form-control valid";
+        $("#error-firstname-employer").hide();
+        return true;
+      }
+    }
+
+    //Validate LastName -
+    function validateEmployerLastName(type) {
+      empLastnameValue = document.getElementById(
+        "input-lastname-employer"
+      ).value;
+
+      if (lastnameValue == "") {
+        if (type == "change") {
+          leadsFormToGTM("change", "fail", "empty", "", "lastname");
+        }
+
+        document.getElementById("error-lastname-emp").innerHTML =
+          "Required field.";
+        document
+          .getElementById("error-lastname-emp")
+          .classList.add("ma-hidden");
+        document.getElementById("input-lastname-employer").className =
+          "form-control error";
+        $("#error-lastname-emp").show();
+        return false;
+      } else {
+        if (type == "change") {
+          leadsFormToGTM("change", "success", "", "", "lastname");
+        }
+        document
+          .getElementById("error-lastname-emp")
+          .classList.remove("ma-hidden");
+        document.getElementById("input-lastname-employer").className =
+          "form-control valid";
+        $("#error-lastname-emp").hide();
+        return true;
+      }
+    }
+
+    // Validate Email -
+    function validateEmployerEmail(type) {
+      companyEmail = document
+        .getElementById("input-company-email")
+        .value.replace(/\s/g, "");
+      document.getElementById("input-company-email").value = companyEmail;
+
+      if (emailValue == "") {
+        if (type == "change") {
+          leadsFormToGTM("change", "fail", "empty", "", "email");
+        }
+
+        document.getElementById("error-company-email").innerHTML =
+          "Required field.";
+        document
+          .getElementById("error-company-email")
+          .classList.add("ma-hidden");
+        document.getElementById("input-company-email").className =
+          "form-control error";
+        $("#error-lastname").show();
+        return false;
+      } else if (
+        !/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(
+          companyEmail
+        )
+      ) {
+        if (type == "change") {
+          leadsFormToGTM("change", "fail", "wrong syntax", "", "email");
+        }
+        document.getElementById("error-company-email").innerHTML =
+          "Enter correct email address.";
+        document
+          .getElementById("error-company-email")
+          .classList.add("ma-hidden");
+        document.getElementById("input-company-email").className =
+          "form-control error";
+        return false;
+      } else if (companyEmail.length < 6) {
+        if (type == "change") {
+          leadsFormToGTM("change", "fail", "wrong syntax", "", "email");
+        }
+        document.getElementById("error-company-email").innerHTML =
+          "Fel format på e-postadress.";
+        document
+          .getElementById("error-company-email")
+          .classList.add("ma-hidden");
+        document.getElementById("input-company-email").className =
+          "form-control error";
+        return false;
+      } else {
+        if (type == "change") {
+          leadsFormToGTM("change", "success", "", "", "email");
+        }
+        document
+          .getElementById("error-company-email")
+          .classList.remove("ma-hidden");
+        document.getElementById("input-company-email").className =
+          "form-control valid";
+        $("#error-company-email").hide();
+        return true;
+      }
+    }
+
+    // Validate Phone -
+    function validateEmployerPhone(type) {
+      empPhoneValue = document.getElementById("input-emp-phone").value;
+      if (empPhoneValue == "") {
+        if (type == "change") {
+          leadsFormToGTM("change", "fail", "empty", "", "phone");
+        }
+        document.getElementById("error-emp-phone").innerHTML =
+          "Required field.";
+        document.getElementById("error-emp-phone").classList.add("ma-hidden");
+        document.getElementById("input-emp-phone").className =
+          "form-control error";
+        $("#error-emp-phone").show();
+        return false;
+      } else if (/[^0123456789+ -]/.test(empPhoneValue)) {
+        if (type == "change") {
+          leadsFormToGTM("change", "fail", "wrong syntax", "", "phone");
+        }
+        document.getElementById("error-emp-phone").innerHTML =
+          "Enter correct phone nummer.";
+        document.getElementById("error-emp-phone").classList.add("ma-hidden");
+        document.getElementById("input-emp-phone").className =
+          "form-control error";
+        return false;
+      } else {
+        if (type == "change") {
+          leadsFormToGTM("change", "success", "", "", "phone");
+        }
+        document
+          .getElementById("error-emp-phone")
+          .classList.remove("ma-hidden");
+        document.getElementById("input-emp-phone").className =
+          "form-control valid";
+        $("#error-emp-phone").hide();
+        return true;
+      }
+    }
+
+    // Validate Company Name - YES
+    function validateCompany(type) {
+      companyValue = document.getElementById("input-company").value;
+
+      if (companyValue == "") {
+        document.getElementById("error-company").innerHTML = "Required field.";
+        document.getElementById("error-company").classList.add("ma-hidden");
+        document.getElementById("input-company").className =
+          "form-control error";
+        $("#error-company").show();
+        if (type == "change") {
+          leadsFormToGTM("change", "fail", "empty", "", "company");
+        }
+
+        return false;
+      } else {
+        document.getElementById("error-company").classList.add("ma-hidden");
+        document.getElementById("input-company").className =
+          "form-control valid";
+        $("#error-company").hide();
+        if (type == "change") {
+          leadsFormToGTM("change", "success", "", "", "company");
+        }
+        return true;
+      }
+    }
+
+    // Validate immediate Hiring Needs
+    function validatePreviouslyWork(type) {
+      previousWorkedValue = $("#input-previous-worked :selected").text();
+
+      if (previousWorkedValue == "" || previousWorkedValue == "Select") {
+        if (type == "change") {
+          leadsFormToGTM("change", "fail", "empty", "", "immediateHiring");
+        }
+
+        document.getElementById("error-previous-worked").innerHTML =
+          "Required field.";
+        document
+          .getElementById("error-previous-worked")
+          .classList.add("ma-hidden");
+        document.getElementById("input-previous-worked").className =
+          "form-control error";
+        $("#error-previous-worked").show();
+        return false;
+      } else {
+        if (type == "change") {
+          leadsFormToGTM("change", "success", "", "", "immediateHiring");
+        }
+        document
+          .getElementById("error-previous-worked")
+          .classList.remove("ma-hidden");
+        document.getElementById("input-previous-worked").className =
+          "form-control valid";
+        $("#error-previous-worked").hide();
+        return true;
+      }
+    }
+
+    // Validate speak to adecco
+    function validatePreviouslyWork(type) {
+      speakConsultantValue = $("#input-speak-adecco :selected").text();
+
+      if (speakConsultantValue == "" || speakConsultantValue == "Select") {
+        if (type == "change") {
+          leadsFormToGTM("change", "fail", "empty", "", "immediateHiring");
+        }
+
+        document.getElementById("error-speak-adecco").innerHTML =
+          "Required field.";
+        document
+          .getElementById("error-speak-adecco")
+          .classList.add("ma-hidden");
+        document.getElementById("input-speak-adecco").className =
+          "form-control error";
+        $("#error-speak-adecco").show();
+        return false;
+      } else {
+        if (type == "change") {
+          leadsFormToGTM("change", "success", "", "", "immediateHiring");
+        }
+        document
+          .getElementById("error-speak-adecco")
+          .classList.remove("ma-hidden");
+        document.getElementById("input-speak-adecco").className =
+          "form-control valid";
+        $("#error-speak-adecco").hide();
+        return true;
+      }
+    }
+
+    // Validate Idustry Value
+    function validateIndustry(type) {
+      companyValue = document.getElementById("input-industry").value;
+
+      if (companyValue == "") {
+        document.getElementById("error-industry").innerHTML = "Required field.";
+        document.getElementById("error-industry").classList.add("ma-hidden");
+        document.getElementById("input-industry").className =
+          "form-control error";
+        $("#error-industry").show();
+        if (type == "change") {
+          leadsFormToGTM("change", "fail", "empty", "", "company");
+        }
+
+        return false;
+      } else {
+        document.getElementById("error-industry").classList.add("ma-hidden");
+        document.getElementById("input-industry").className =
+          "form-control valid";
+        $("#error-industry").hide();
+        if (type == "change") {
+          leadsFormToGTM("change", "success", "", "", "company");
+        }
+        return true;
+      }
+    }
+
+    // Validate Update Checkbox
+    function validateUpdateCheckbox(type) {
+      updateCheckbox = document.getElementById("latest_update").checked;
+      return true;
+    }
+
+    // Validate AGREE Checkbox
+    function validateUpdateCheckbox(type) {
+      agreeCheckbox = document.getElementById("agree").checked;
+
+      if (agreeCheckbox) {
+        document.getElementById("privacy_error").style.display = "none";
+        return true;
+      } else {
+        document.getElementById("privacy_error").style.display = "block";
+        return false;
+      }
+    }
+
+    /* *************************************************************
+                    VALIDATION PROCESS
+    ************************************************************* */
+    function validateForm(e) {
+      typeValue = $("#input-iam option:selected").val();
+      typetext = $("#input-iam option:selected").text();
+
+      // ====== Call Functions for Validation
+      validateUpdateCheckbox();
+      validateUpdateCheckbox();
+
+      // Check Type and Validation
+      if (typeValue == "1") {
+        $("#error-immediateHiring").hide();
+        $("#input-immediateHiring").removeAttr("required");
+        $("#error-location").hide();
+        $("#error-company").hide();
+        $("#input-location").removeAttr("required");
+        $("#input-company").removeAttr("required");
+
+        validateFirstName();
+        validateLastName();
+        validateEmail();
+        validatePhone();
+        validateimmediateHiring();
+
+        if (
+          validateFirstName() &&
+          validateLastName() &&
+          validateEmail() &&
+          validatePhone() &&
+          validateimmediateHiring()
+        ) {
+          submitReq();
+        }
+      }
+      if (typeValue == "2") {
+        validateEmployerFirstName();
+        validateEmployerLastName();
+        validateEmployerEmail();
+        validateCompany();
+        validatePreviouslyWork();
+        validatePreviouslyWork();
+        validateIndustry();
+
+        if (
+          validateEmployerFirstName() &&
+          validateEmployerLastName() &&
+          validateEmployerEmail() &&
+          validateCompany() &&
+          validatePreviouslyWork() &&
+          validatePreviouslyWork() &&
+          validateIndustry()
+        ) {
+          submitReq();
+        }
+      }
+
+      // if (validateFirstName() && validateLastName() && validateEmail()) {
+      // $("#sendButton").prop("disabled", true);
+      // $("#pageloader").fadeIn();
+      //   var today = new Date();
+      //   var dd = today.getDate();
+      //   var mm = today.getMonth() + 1; //January is 0!
+      //   var yyyy = today.getFullYear();
+
+      //   if (dd < 10) {
+      //     dd = "0" + dd;
+      //   }
+
+      //   if (mm < 10) {
+      //     mm = "0" + mm;
+      //   }
+      //   today = yyyy + "-" + mm + "-" + dd;
+      // }
+
+      function submitReq() {
+        $("#sendButton").prop("disabled", true);
+        $("#pageloader").fadeIn();
+        var today = new Date();
+        var dd = today.getDate();
+        var mm = today.getMonth() + 1; //January is 0!
+        var yyyy = today.getFullYear();
+
+        if (dd < 10) {
+          dd = "0" + dd;
+        }
+
+        if (mm < 10) {
+          mm = "0" + mm;
+        }
+        today = yyyy + "-" + mm + "-" + dd;
+
+        try {
+          submitForm("");
+        } catch (err) {
+          console.error(error);
+        }
+      }
+    }
+
+    function submitForm(hdnattributionid) {
+      var data = {};
+      if (typeValue == "1") {
+        data = {
+          typeValue: typeValue,
+          companyValue: companyValue,
+          firstnameValue: firstnameValue,
+          lastnameValue: lastnameValue,
+          emailValue: emailValue,
+          immediateHiringvalue: immediateHiringNeedsValue,
+          phoneValue: phoneValue.replace(/ /g, ""),
+          wantNewsUpdate: updateCheckbox,
+        };
+      } else if (typeValue == "2") {
+        data = {
+          empFirstnameValue: empFirstnameValue,
+          empLastnameValue: empLastnameValue,
+          companyEmail: companyEmail,
+          empPhoneValue: empPhoneValue,
+          companyValue: companyValue,
+          previousWorkedValue: previousWorkedValue,
+          speakConsultantValue: speakConsultantValue,
+          industryValue: industryValue,
+          wantNewsUpdate: updateCheckbox,
+        };
+      }
+
+      console.log(data); //================
+
+      var uriEncodedParams = $.param(data);
+      var targetUrl =
+        "https://go.pardot.com/l/503591/2022-02-22/2698trm?" + uriEncodedParams;
+
+      $.ajax({
+        url: targetUrl,
+        dataType: "jsonp",
+        jsonpCallback: "JsonpCallback",
+        jsonp: "callback",
+        success: function (msg) {
+          console.log(msg);
+          window.location.assign("/labour-market-outlook/thank-you");
+        },
+        error: ServiceFailed,
+      });
+
+      //setTimeout( console.log('wait here'), 5000);
+
+      function JsonpCallback(data) {
+        console.log(data);
+        if (data.responseStatus == "200") {
+          window.location.assign("/labour-market-outlook/thank-you");
+        } else {
+          console.log(data.responseDetails);
+        }
+      }
+
+      function ServiceFailed(msg) {
+        console.log("ServiceFailed");
+        console.log(msg.status);
+        setTimeout(console.log("ServiceFailed"), 1000);
+
+        if (msg.status == "200") {
+          window.location.assign("/labour-market-outlook/thank-you");
+        }
+        Type = null;
+        varUrl = null;
+        Data = null;
+        ContentType = null;
+        DataType = null;
+        ProcessData = null;
+      }
+      for (let i = 0; i < 4000; i++) {
+        console.log(i);
+      }
+    }
+  </script>
+</div>

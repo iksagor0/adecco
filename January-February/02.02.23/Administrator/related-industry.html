@@ -1,0 +1,226 @@
+<section id="related_industries">
+    <div class="container">
+        <div class="section_parent">
+            <h2 class="section_head_title">
+                Related <span class="text-black">Industries</span>
+            </h2>
+
+            <!-- ===========================================================================
+                                            DESKTOP 
+                =========================================================================== -->
+            <div class="industries_container desktop">
+                <div class="industry">
+                    <div class="text_area">
+                        <h4>Admin & Office</h4>
+                        <a href="https://www.adecco.co.uk/jobs/admin-and-office-jobs/"
+                            class="brand_button brand_button_white">
+                            View Jobs
+                        </a>
+                    </div>
+                    <img src="-/media/4210751d88bb4c7f913b3f65154b3183.ashx" alt="" />
+                </div>
+
+                <div class="industry">
+                    <div class="text_area">
+                        <h4>Education & Training</h4>
+                        <a href="https://www.adecco.co.uk/jobs/education-and-training-jobs/"
+                            class="brand_button brand_button_white">
+                            View Jobs
+                        </a>
+                    </div>
+                    <img src="-/media/3e14131d9e394081b179eaf8d17d5d9b.ashx" alt="" />
+                </div>
+
+                <div class="industry">
+                    <div class="text_area">
+                        <h4>Sales</h4>
+                        <a href="https://www.adecco.co.uk/jobs/sales-jobs/" class="brand_button brand_button_white">
+                            View Jobs
+                        </a>
+                    </div>
+                    <img src="-/media/2547571afddf42cebc63b31ca329616c.ashx" alt="" />
+                </div>
+            </div>
+
+            <!-- ===========================================================================
+                                            MOBILE 
+                =========================================================================== -->
+            <div class="industries_container mobile">
+                <div class="industry">
+                    <img src="-/media/4210751d88bb4c7f913b3f65154b3183.ashx" alt="" />
+                    <div class="text_area">
+                        <h4>Admin & Office</h4>
+                        <a href="https://www.adecco.co.uk/jobs/admin-and-office-jobs/"
+                            class="brand_button brand_button_white">
+                            View Jobs
+                        </a>
+                    </div>
+                </div>
+
+                <div class="industry">
+                    <img src="-/media/3e14131d9e394081b179eaf8d17d5d9b.ashx" alt="" />
+                    <div class="text_area">
+                        <h4>Education & Training</h4>
+                        <a href="https://www.adecco.co.uk/jobs/education-and-training-jobs/"
+                            class="brand_button brand_button_white brand_button_">
+                            View Jobs
+                        </a>
+                    </div>
+                </div>
+
+                <div class="industry">
+                    <img src="-/media/2547571afddf42cebc63b31ca329616c.ashx" alt="" />
+                    <div class="text_area">
+                        <h4>Sales</h4>
+                        <a href="https://www.adecco.co.uk/jobs/sales-jobs/" class="brand_button brand_button_white">
+                            View Jobs
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .text-black {
+        color: black;
+    }
+
+    .brand_button_white {
+        background: white;
+        border: 1px solid white;
+        color: #da291c;
+        font-size: 18px;
+    }
+
+    #related_industries {
+        padding: 60px 0 160px;
+        background: #efefef;
+    }
+
+    #related_industries .section_parent {
+        width: calc(100% - 300px);
+    }
+
+    #related_industries .section_head_title {
+        margin-bottom: 60px;
+    }
+
+    #related_industries .industry {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        /* grid-template-columns: 40% 60%; */
+        background: linear-gradient(#d72721 0%, #bf1640 100%);
+        border-radius: 10px;
+        margin-bottom: 25px;
+        overflow: hidden;
+    }
+
+    #related_industries .industry img {
+        width: 100%;
+        transform: scale(1.01);
+        clip-path: polygon(4% 0, 100% 0, 100% 100%, 12% 100%);
+    }
+
+    #related_industries .industry .text_area {
+        display: grid;
+        place-content: center;
+    }
+
+    #related_industries .industry .text_area h4 {
+        /* margin-bottom: 20px; */
+        color: white;
+        text-align: center;
+
+        margin: 0 !important;
+        margin-bottom: 5px !important;
+        padding: 5px;
+        font-size: 25px;
+    }
+
+    #related_industries .mobile {
+        display: none;
+    }
+
+    /* RESPONSIVE */
+
+    /* @media screen and (max-width: 991px) {
+        #related_industries .industry img {
+            display: none;
+        }
+
+        #related_industries .industry {
+            grid-template-columns: 1fr;
+            height: 200px;
+            padding: 20px;
+        }
+    } */
+    @media screen and (max-width: 1200px) {
+        #related_industries .industry .text_area h4 {
+            font-size: 19px;
+            line-height: 30px;
+        }
+    }
+
+    @media screen and (max-width: 991px) {
+        #related_industries .section_parent {
+            width: 100%;
+        }
+
+        #related_industries .desktop {
+            display: none;
+        }
+
+        #related_industries .mobile {
+            display: block;
+        }
+
+        #related_industries .mobile .industry {
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+
+        #related_industries .mobile .industry img {
+            clip-path: polygon(0 0, 100% 0%, 100% 78%, 0 94%);
+        }
+
+        #related_industries .mobile .industry .text_area {
+            padding-bottom: 30px;
+        }
+
+        .brand_button_black {
+            color: black;
+        }
+    }
+
+    @media screen and (max-width: 767px) {
+        #related_industries .mobile .industry h4 {
+            font-size: clamp(1rem, calc(0.37rem + 3.13vw), 1.88rem);
+        }
+    }
+
+    /* Other Footer - Not here */
+    @media (max-width: 640px) {
+        #ps-footer {
+            width: 100%;
+            margin: 50px 0;
+        }
+    }
+
+    /* Outside Code */
+    #body_3_spotlight {
+        position: relative;
+        z-index: 1;
+    }
+
+    #body_4_spotlightContainer {
+        position: relative;
+        z-index: 9999999;
+    }
+
+    footer.page-footer.footer_open {
+        position: relative;
+        z-index: 999999;
+    }
+</style>
