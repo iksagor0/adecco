@@ -1,0 +1,402 @@
+/* common css */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+img,
+a.anchor {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+}
+
+img {
+  width: 100%;
+}
+
+a.anchor:hover,
+a.anchor:link,
+a.anchor:active,
+a.anchor:visited {
+  color: #fff;
+}
+
+body {
+  font-family: Neutraface Text;
+}
+
+.container {
+  max-width: 1280px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* 25-35 */
+.font_35 {
+  font-size: clamp(1.56rem, calc(1.42rem + 0.64vw), 2.19rem);
+  line-height: clamp(2.19rem, calc(1.99rem + 0.9vw), 3.06rem);
+  color: #fff;
+}
+
+/* 22-30 */
+.font_30 {
+  font-size: clamp(1.38rem, calc(1.26rem + 0.51vw), 1.88rem);
+  line-height: clamp(2rem, calc(1.88rem + 0.51vw), 2.5rem);
+}
+
+/* 18-23 */
+.font_23 {
+  font-size: clamp(1.13rem, calc(1.05rem + 0.32vw), 1.44rem);
+  line-height: clamp(1.5rem, calc(1.4rem + 0.45vw), 1.94rem);
+}
+
+/* 17-21 */
+.font_21 {
+  font-size: clamp(1.06rem, calc(1rem + 0.26vw), 1.31rem);
+  line-height: clamp(1.38rem, calc(1.29rem + 0.38vw), 1.75rem);
+}
+
+/* 16-20 */
+.font_20 {
+  font-size: clamp(1rem, calc(0.94rem + 0.26vw), 1.25rem);
+  line-height: clamp(1.19rem, calc(1.07rem + 0.51vw), 1.69rem);
+}
+
+/* 14-18 */
+.font_18 {
+  font-size: clamp(0.88rem, calc(0.82rem + 0.26vw), 1.13rem);
+  line-height: clamp(1.13rem, calc(1.04rem + 0.38vw), 1.5rem);
+}
+
+.button_transparent {
+  display: block;
+  border-radius: 38px;
+  background: #fff;
+  border: 2px solid #5cb8b2;
+  text-align: center;
+  color: #5cb8b2;
+  min-width: 280px;
+  height: 50px;
+  display: grid;
+  place-content: center;
+  font-weight: 700;
+  padding: 15px;
+}
+
+.button_white {
+  min-width: 220px;
+  height: 50px;
+}
+
+.button_white:hover,
+.button_transparent:hover {
+  background: #5cb8b2;
+  border: 2px solid #5cb8b2;
+  color: #fff;
+}
+
+/* ===================================== */
+/* ========== EMAIL PREFERENCE ========= */
+/* ===================================== */
+
+#hero {
+  background: url(/assets/header.png) no-repeat;
+  background-size: cover;
+  height: 330px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#form_section .switch_btn_container button {
+  border: none;
+  background: transparent;
+  color: #a0a0a0;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+#form_section .switch_btn_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  margin-top: 65px;
+}
+
+#form_section #email_form {
+  margin-top: 90px;
+}
+
+/* #form_section #email_form .form_content small {
+  margin-left: 20px;
+} */
+
+#form_section .switch_btn_container .email_preference {
+  border-right: 2px solid #a0a0a0;
+}
+
+#form_section .switch_btn_container .prefer_btn {
+  color: #5cb8b2;
+}
+#form_section #improve_service .form_content,
+#form_section .form_control h4,
+#form_section .company_info h4,
+#form_section .business_info h4 {
+  position: relative;
+}
+#form_section #improve_service .form_content::after,
+#form_section .form_control h4::after,
+#form_section .company_info h4::after,
+#form_section .business_info h4::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 1px;
+  background: #5cb8b2;
+  left: 0;
+  bottom: -10px;
+}
+
+#form_section #email_form .form_control {
+  margin-bottom: 60px;
+}
+
+#form_section #email_form .trading_entities {
+  margin-bottom: 28px;
+}
+
+#form_section .form_content small,
+#form_section .trading_entities.trading_service small {
+  display: inline-block;
+  margin-left: 25px;
+}
+
+#form_section .form_control input,
+#form_section .trading_entities input {
+  margin-right: 10px;
+}
+
+#form_section #email_form .form_content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+#form_section .multi_text {
+  display: flex;
+  align-items: start;
+  gap: 5px;
+}
+#form_section .multi_text input {
+  margin-top: 6px;
+}
+#form_section .multi_text.milena input {
+  margin-top: 8px;
+}
+
+#form_section #email_form .form_control h4,
+#personal_form .company_info h4,
+#personal_form .business_info h4 {
+  margin-bottom: 30px;
+}
+
+#personal_form .text_area {
+  margin: 60px 0;
+}
+
+#personal_form .text_area .latest_info {
+  margin-top: 18px;
+}
+
+#personal_form .personal_info_msg,
+#personal_form .latest_info {
+  text-align: center;
+}
+
+#personal_form .personal_info_msg {
+  color: #23a31d;
+  font-weight: 500;
+}
+
+#personal_form .basic_info,
+#personal_form .company_info .content_container,
+#personal_form .business_info .content_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-bottom: 70px;
+}
+
+#personal_form .form_control {
+  display: flex;
+  flex-direction: column;
+}
+
+#personal_form .form_control input,
+#personal_form .form_control select {
+  height: 50px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #dcdcdc;
+}
+
+#personal_form .form_control label {
+  margin-bottom: 5px;
+}
+
+#personal_form .btn_preference {
+  margin: 0 auto;
+}
+
+.hide {
+  display: none;
+}
+
+.active_tab {
+  display: block;
+}
+
+/* ------------------------------------ */
+/* --------- SELECT BUTTON STYLE ------*/
+/* ------------------------------------ */
+#personal_form .form_control.dropdown {
+  position: relative;
+}
+
+/* select::-ms-expand {
+  display: none;
+} */
+
+.form_control.dropdown::after {
+  position: absolute;
+  content: ">";
+  font: 20px "Consolas", monospace;
+  color: #5cb8b2;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+  right: 11px;
+  top: 50%;
+  pointer-events: none;
+}
+
+.form_control.dropdown select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  /* Add some styling */
+  display: block;
+  width: 100%;
+  font-size: 18px;
+  line-height: 1.75;
+  position: relative;
+}
+
+/* ===================================== */
+/* ============== THANK YOU ============ */
+/* ===================================== */
+#hero_thank_you {
+  background: url(/assets/thank-you-header.png) no-repeat;
+  background-size: cover;
+  height: 850px;
+  display: flex;
+  padding: 50px 0;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+#hero_thank_you .container {
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+#hero_thank_you h3 {
+  height: 380px;
+}
+
+#hero_thank_you button {
+  margin: 0 auto;
+}
+
+/* ===================================== */
+/* =========== EMAIL UNSUBSCRIBE ======= */
+/* ===================================== */
+
+#form_section #improve_service .form_content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+#form_section #improve_service .form_control {
+  margin-bottom: 53px;
+}
+
+#form_section #improve_service .form_control h4 {
+  margin: 90px 0 35px;
+}
+
+#form_section #improve_service .trading_entities {
+  margin-bottom: 34px;
+}
+
+#form_section #improve_service .form_content {
+  position: relative;
+}
+#form_section #improve_service .form_content::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 1px;
+  background: #5cb8b2;
+  left: 0;
+  bottom: -15%;
+}
+
+/* ===================================== */
+/* ============SORRY UNSUBSCRIBE======== */
+/* ===================================== */
+#hero_unsubscribe {
+  background: url(/assets/sorry.png) no-repeat right;
+  background-size: cover;
+  height: 850px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 50px 0;
+}
+
+#hero_unsubscribe .container {
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+#hero_unsubscribe h3 {
+  height: 400px;
+}
+
+#hero_unsubscribe button {
+  margin: 0 auto;
+}

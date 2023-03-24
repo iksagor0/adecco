@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Preferences</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/responsive.css" />
+  </head>
+
+  <body>
+    <main>
+      <!-- header banner -->
+      <section id="hero">
+        <div class="container">
+          <h3 class="font_35">Update my email preferences</h3>
+        </div>
+      </section>
+
+      <section id="form_section">
+        <div class="container">
+          <div class="switch_btn_container">
+            <button class="font_30 email_preference prefer_btn">
+              Email Preferences
+            </button>
+            <button class="font_30 personal_information">
+              Personal Information
+            </button>
+          </div>
+
+          <!-- Email Preferences -->
+          <form action="" id="email_form" class="hide active_tab">
+            <!-- Frequency -->
+            <div class="form_control">
+              <h4 class="font_30">
+                Frequency - How often do you want to hear from us?
+              </h4>
+              <div class="form_content font_20 custom_checkbox">
+                <label for="">
+                  <input type="checkbox" name="" id="" /> Send me all updates
+                </label>
+                <label for=""
+                  ><input type="checkbox" name="" id="" /> Email me twice a
+                  month</label
+                >
+                <label for=""
+                  ><input type="checkbox" name="" id="" /> Email me once a
+                  month</label
+                >
+                <label for=""
+                  ><input type="checkbox" name="" id="" /> Pause emails for a
+                  month</label
+                >
+              </div>
+            </div>
+
+            <!-- Content Preferences -->
+            <div class="form_control font_20">
+              <h4 class="font_30">
+                Content Preferences - Choose the content you want to receive
+              </h4>
+              <div class="form_content">
+                <label for=""
+                  ><input type="checkbox" name="" id="" /> Everything</label
+                >
+                <label for=""
+                  ><input type="checkbox" name="" id="" /> Newsletter <br />
+                  <small class="font_18"
+                    >A monthly financial health newsletter featuring our latest
+                    blog posts.</small
+                  >
+                </label>
+                <label for=""
+                  ><input type="checkbox" name="" id="" /> Marketing emails<br />
+                  <small class="font_18"
+                    >General marketing emails about Credit Ninja products and
+                    features.</small
+                  >
+                </label>
+                <label for=""
+                  ><input type="checkbox" name="" id="" /> Promotional offers<br />
+                  <small class="font_18"
+                    >Get notitied of pre-approval and retinance offers as soon
+                    as they’re added to your account.</small
+                  >
+                </label>
+              </div>
+            </div>
+
+            <!--Brands -->
+            <div class="form_control font_20">
+              <h4 class="font_30">
+                Which of our other brands would you like to hear from?
+              </h4>
+              <div class="form_content">
+                <label for=""
+                  ><input type="checkbox" name="" id="" /> Adecco UK</label
+                >
+                <label for=""
+                  ><input type="checkbox" name="" id="" /> Adecco Ireland</label
+                >
+                <label for=""
+                  ><input type="checkbox" name="" id="" /> Badenoch &
+                  Clark</label
+                >
+                <label for=""
+                  ><input type="checkbox" name="" id="" /> Modis</label
+                >
+                <label for=""
+                  ><input type="checkbox" name="" id="" /> Office Angels</label
+                >
+                <label for=""
+                  ><input type="checkbox" name="" id="" /> Spring</label
+                >
+                <label for=""
+                  ><input type="checkbox" name="" id="" /> The Adecco
+                  Group</label
+                >
+              </div>
+            </div>
+
+            <!-- trading entities -->
+            <div class="trading_entities">
+              <small class="font_18"
+                >The business of the Adecco Group UK & Ireland is transacted via
+                a number of differently branded trading entities, as follows:
+                Adecco UK Limited, Adia Technology Limited, Modis International
+                Limited, Badenoch and Clark Limited, Ajilon (UK) Limited, Office
+                Angels Limited, Penna plc, Pontoon Europe Limited, Spring
+                Technology Staffing Services Limited.</small
+              >
+            </div>
+
+            <button
+              class="btn_preference font_21 button_transparent email_tab_button"
+            >
+              Update my preferences
+            </button>
+          </form>
+
+          <!-- Personal Information -->
+          <form action="" id="personal_form" class="hide">
+            <div class="text_area font_20">
+              <p class="personal_info_msg hide">
+                Information saved succesfully!
+              </p>
+              <p class="latest_info">
+                Make sure your personal information is up to date. Provide us
+                with your latest information using the form below.
+              </p>
+            </div>
+
+            <!-- basic information -->
+            <div class="basic_info font_18">
+              <div class="form_control">
+                <label for="">First name</label>
+                <input type="text" />
+              </div>
+              <div class="form_control">
+                <label for="">Last name</label>
+                <input type="text" />
+              </div>
+              <div class="form_control">
+                <label for="">Business email address</label>
+                <input type="text" />
+              </div>
+              <div class="form_control">
+                <label for="">Phone number</label>
+                <input type="text" />
+              </div>
+              <div class="form_control">
+                <label for="">Job function</label>
+                <input type="text" />
+              </div>
+              <div class="form_control dropdown">
+                <label for="">Job level</label>
+                <select name="" id="">
+                  <option value="">1</option>
+                  <option value="">2</option>
+                </select>
+              </div>
+              <div class="form_control">
+                <label for="">Job title</label>
+                <input type="text" />
+              </div>
+              <div class="form_control dropdown">
+                <label for="">Your location</label>
+                <select name="" id="">
+                  <option value="">3</option>
+                  <option value="">4</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Company  information -->
+            <div class="company_info font_18">
+              <h4 class="font_30">Company Information</h4>
+              <div class="content_container">
+                <div class="form_control">
+                  <label for="">Company Name</label>
+                  <input type="text" />
+                </div>
+                <div class="form_control dropdown">
+                  <label for="">Sector</label>
+                  <select name="" id="">
+                    <option value="">1</option>
+                    <option value="">2</option>
+                  </select>
+                </div>
+                <div class="form_control dropdown">
+                  <label for="">Industry</label>
+                  <select name="" id="">
+                    <option value="">3</option>
+                    <option value="">4</option>
+                  </select>
+                </div>
+                <div class="form_control dropdown">
+                  <label for="">Number of permanent employees in the UK</label>
+                  <select name="" id="">
+                    <option value="">3</option>
+                    <option value="">4</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <!-- Business  information -->
+            <div class="business_info font_18">
+              <h4 class="font_30">Business</h4>
+              <div class="content_container">
+                <div class="form_control">
+                  <label for="">What is your biggest challenge?</label>
+                  <input type="text" />
+                </div>
+                <div class="form_control dropdown">
+                  <label for="">Current recuritment model</label>
+                  <select name="" id="">
+                    <option value="">3</option>
+                    <option value="">4</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <button
+              class="btn_preference font_21 button_transparent personal_info_button"
+            >
+              Update my preferences
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <script src="/index.js"></script>
+  </body>
+</html>

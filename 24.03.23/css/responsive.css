@@ -1,0 +1,60 @@
+@media screen and (max-width: 991px) {
+  #hero,
+  #hero_thank_you {
+    background-position: 25%;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  #personal_form .basic_info,
+  #personal_form .company_info .content_container,
+  #personal_form .business_info .content_container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-bottom: 50px;
+  }
+
+  #form_section .switch_btn_container {
+    margin: 40px 0;
+    /* gap: 10px; */
+  }
+  #form_section .switch_btn_container button {
+    font-size: 18px;
+  }
+
+  #form_section .switch_btn_container .email_preference {
+    padding-right: 10px;
+    margin-right: 10px;
+  }
+
+  #personal_form .text_area {
+    margin-bottom: 40px;
+  }
+
+  #hero,
+  #hero_thank_you {
+    background-position: 35%;
+  }
+
+  #hero_thank_you {
+    height: 550px;
+  }
+
+  #hero_thank_you h3 {
+    height: 180px;
+  }
+
+  /* unsubscribe */
+  #hero_unsubscribe {
+    height: 550px;
+    background-position: 80%;
+  }
+
+  #hero_unsubscribe h3 {
+    height: 170px;
+  }
+
+  .form_control.dropdown::after {
+    font: 30px "Consolas", monospace;
+  }
+}
