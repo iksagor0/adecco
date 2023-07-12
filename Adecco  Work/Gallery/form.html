@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+  </head>
+  <body>
+    <form action="#" id="form">
+      <label for="">
+        <input type="text" placeholder="Name" id="name" required />
+        <span class="error__msg"></span>
+      </label>
+
+      <label for="">
+        <input type="number" placeholder="Number" required
+      /></label>
+
+      <label for=""> <input type="email" placeholder="Email" required /></label>
+
+      <input type="submit" id="submit" value="Submit" />
+    </form>
+
+    <script>
+      const name = document.getElementById("name");
+      const form = document.getElementById("form");
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        const nameValue = name.value;
+
+        [...nameValue].forEach((letter) => {
+          const isNumber = Number.isInteger(Number(letter));
+
+          if (isNumber) {
+            document.querySelector(".error__msg").innerHTML = "Not valid Name";
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

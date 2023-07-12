@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      padding: 0 100px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    img {
+      width: 100%;
+    }
+    .gallery {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+
+    .gallery img {
+      cursor: pointer;
+    }
+
+    #display {
+      text-align: center;
+    }
+
+    #display img {
+      max-width: 800px;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div id="display">
+        <img src="./images/A.jpg" alt="" />
+      </div>
+
+      <section class="gallery">
+        <img src="./images/A.jpg" alt="" class="A" />
+        <img src="./images/B.jpg" alt="" class="B" />
+        <img src="./images/C.jpg" alt="" class="C" />
+        <img src="./images/D.jpg" alt="" class="D" />
+      </section>
+    </div>
+
+    <script>
+      // ******************* METHOD 1 *******************
+      //   const display = document.querySelector("#display");
+      //   const images = document.querySelectorAll(".gallery img");
+
+      //   images.forEach((img, index) => {
+      //     img.addEventListener("click", () => {
+      //       const displayImg = document.querySelector("#display img");
+      //       displayImg.remove();
+
+      //       let clone = img.cloneNode(true);
+      //       display.appendChild(clone);
+      //     });
+      //   });
+
+      // ******************* METHOD 2 *******************
+      const displayImg = document.querySelector("#display img");
+      const images = document.querySelectorAll(".gallery img");
+
+      for (let i = 0; i < images.length; i++) {
+        images[i].addEventListener("click", () => {
+          displayImg.src = images[i].src;
+        });
+      }
+
+      //   images.forEach((img) => (displayImg.src = img.src));
+
+      // ******************* METHOD 3 *******************
+      //   const images = [
+      //     "/images/A.jpg",
+      //     "/images/B.jpg",
+      //     "/images/C.jpg",
+      //     "/images/D.jpg",
+      //   ];
+
+      //   const gallery = document.querySelector(".gallery");
+      //   const displayImg = document.querySelector("#display img");
+
+      //   for (let i = 0; i < images.length; i++) {
+      //     const img = document.createElement("img");
+      //     img.className = "gallery_image";
+      //     img.alt = "image_" + i;
+      //     img.src = images[i];
+
+      //     img.addEventListener("click", () => {
+      //       displayImg.src = images[i];
+      //     });
+      //     gallery.appendChild(img);
+      //   }
+    </script>
+  </body>
+</html>
